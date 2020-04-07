@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.fairyhands.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Documents\\Courses\\SEM 2\\3D Game Application (SEM 2)\\Fairy-Hands\\Fairy Hands\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Fairy Hands [Testing]"
+        }
+      }
+    }
+  ]
+}
