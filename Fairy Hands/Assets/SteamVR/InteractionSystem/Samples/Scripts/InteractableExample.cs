@@ -102,7 +102,6 @@ namespace Valve.VR.InteractionSystem.Sample
 		}
 
 
-
 		//-------------------------------------------------
 		// Called when this GameObject is detached from the hand
 		//-------------------------------------------------
