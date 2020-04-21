@@ -2,7 +2,7 @@
 using System.Collections;
 using Valve.Newtonsoft.Json.Utilities;
 
-public class DemoBookController : MonoBehaviour
+public class AutoBookController : MonoBehaviour
 {
     [Tooltip("Defines the pages of this book")]
     public GameObject[] UiPages; // The UI prefabs associated to each pages
@@ -11,6 +11,30 @@ public class DemoBookController : MonoBehaviour
 
     public Sprite[] pageBackground;
     private int pageStyleIndex = 0;
+
+    // Init pages at Start
+    void Awake()
+    {
+
+        int i = 0;
+        bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
+        AnimatedBookController.Page page = bookController.pagesUi[0];
+        
+        foreach (var uiPage in UiPages) {
+
+            if (i >= bookController.pagesUi.Count) {
+                bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
+                page = bookController.pagesUi[i];
+            }
+            
+            if (page.UiRecto == null) {
+                page.UiRecto = uiPage;
+            } else {
+                page.UiVerso = uiPage;
+                i++;
+            }
+        }
+    }
 
     // Control book with Left / Right arrows
     void Update()
