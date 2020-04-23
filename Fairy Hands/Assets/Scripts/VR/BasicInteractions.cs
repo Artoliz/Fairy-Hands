@@ -84,6 +84,7 @@ public class BasicInteractions : MonoBehaviour
     private void HandAttachedUpdate(Hand hand)
     {
         Debug.Log("HandAttachedUpdate");
+
     }
 
     //-------------------------------------------------
