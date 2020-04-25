@@ -7,6 +7,9 @@ TagManager:
   - Ingredient
   - PlayerRightHand
   - PlayerLeftHand
+  - Tool
+  - Board
+  - Knife
   layers:
   - Default
   - TransparentFX
@@ -17,8 +20,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Knife
+  - Ingredient
   - 
   - 
   - 

@@ -21,7 +21,6 @@ public class Getter : MonoBehaviour
 
         if (hand.currentAttachedObject == null && hand.GetGrabStarting() == GrabTypes.Pinch)
         {
-            Debug.Log("PlayerTry To Get me");
             GameObject prefab = Instantiate(Prefab);
             hand.AttachObject(prefab, GrabTypes.Pinch);
         }

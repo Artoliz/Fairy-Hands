@@ -19,7 +19,7 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnHandHoverBegin(Hand hand)
     {
-        Debug.Log("OnHandHoverBegin");
+        //Debug.Log("OnHandHoverBegin");
     }
 
 
@@ -28,7 +28,7 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnHandHoverEnd(Hand hand)
     {
-        Debug.Log("OnHandHoverEnd");
+        //Debug.Log("OnHandHoverEnd");
     }
 
 
@@ -65,7 +65,22 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnAttachedToHand(Hand hand)
     {
-        Debug.Log("OnAttachToHand");
+        if (this.tag == "Ingredient")
+        {
+            GetComponent<Ingredient>().State = Ingredient.StateIngredient.InHand;
+
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+            if (GetComponent<MeshCollider>())
+            {
+                GetComponent<MeshCollider>().isTrigger = false;
+
+            }
+            else if (GetComponent<BoxCollider>())
+            {
+                GetComponent<BoxCollider>().isTrigger = false;
+            }
+        }
     }
 
 
@@ -74,7 +89,10 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnDetachedFromHand(Hand hand)
     {
-        Debug.Log("OnDetachedFromHand");
+        if (this.tag == "Ingredient")
+        {
+            GetComponent<Ingredient>().State = Ingredient.StateIngredient.None;
+        }
     }
 
 
@@ -83,7 +101,7 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void HandAttachedUpdate(Hand hand)
     {
-        Debug.Log("HandAttachedUpdate");
+        //Debug.Log("HandAttachedUpdate");
 
     }
 
@@ -92,7 +110,7 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnHandFocusAcquired(Hand hand)
     {
-        Debug.Log("OnHandFocusAcquired");
+        //Debug.Log("OnHandFocusAcquired");
     }
 
 
@@ -101,6 +119,6 @@ public class BasicInteractions : MonoBehaviour
     //-------------------------------------------------
     private void OnHandFocusLost(Hand hand)
     {
-        Debug.Log("OnHandFocusLost");
+        //Debug.Log("OnHandFocusLost");
     }
 }
