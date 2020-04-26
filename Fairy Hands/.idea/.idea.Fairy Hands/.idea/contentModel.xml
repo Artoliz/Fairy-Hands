@@ -124,6 +124,9 @@
               <e p="BasicInteractions.cs" t="Include" />
             </e>
           </e>
+          <e p="Menu" t="Include">
+            <e p="Menu.cs" t="Include" />
+          </e>
         </e>
         <e p="SteamVR" t="Include">
           <e p="Editor" t="Include">
