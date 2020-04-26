@@ -10,6 +10,7 @@ TagManager:
   - Tool
   - Board
   - Knife
+  - Potion
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7432186743578888801}
   - component: {fileID: 5008527770336151207}
   - component: {fileID: 3365774527768974026}
+  - component: {fileID: 114758571926145184}
   m_Layer: 0
   m_Name: Spider_Sliced
   m_TagString: Ingredient
@@ -193,6 +194,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e640d31faca11d94fb7454b853d3d0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114758571926145184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912718327297828897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00809001f3d6144ab2997b53eb99073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _type: 12
 --- !u!1 &7912718327297828899
 GameObject:
   m_ObjectHideFlags: 0
