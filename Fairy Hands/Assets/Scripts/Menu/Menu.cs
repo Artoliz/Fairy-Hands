@@ -66,9 +66,6 @@ public class Menu : MonoBehaviour
             if (hand != null)
             {
                 //!!! Reset game here !!!
-
-                startMenu.SetActive(false);
-                gameMenu.SetActive(true);
             }
         }
     }

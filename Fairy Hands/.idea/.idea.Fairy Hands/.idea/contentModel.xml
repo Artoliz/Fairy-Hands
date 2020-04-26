@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\kelli\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\kelli\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Fairy Hands.-39430833.00" t="ExcludeRecursive" />
-    <e p="C:\Users\kelli\Desktop\Dev\UnityProject\Fairy-Hands\Fairy Hands" t="IncludeRecursive">
+    <e p="C:\Users\akavi\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\akavi\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Fairy Hands.1447513764.00" t="ExcludeRecursive" />
+    <e p="C:\Users\akavi\Desktop\KMU_Projects\3D_Game_Application\Fairy-Hands\Fairy Hands" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -26,32 +26,7 @@
             </e>
           </e>
         </e>
-        <e p="BomJ MeatHammer" t="Include">
-          <e p="readme.txt" t="Include" />
-        </e>
-        <e p="Flying_Tree" t="Include">
-          <e p="Materials" t="Include">
-            <e p="Leafs.shader" t="Include" />
-          </e>
-        </e>
-        <e p="Golem" t="Include">
-          <e p="script" t="Include">
-            <e p="CameraRotate.cs" t="Include" />
-          </e>
-          <e p="shader" t="Include">
-            <e p="Toon2side-Lighted.shader" t="Include" />
-          </e>
-        </e>
-        <e p="InnerDriveStudios" t="Include">
-          <e p="SkullChest" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="CameraDolly.cs" t="Include" />
-              <e p="MaterialControlPanel.cs" t="Include" />
-              <e p="SkullChest.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="JMO_Assets" t="Include">
+        <e p="FX_Assets" t="Include">
           <e p="Cartoon FX" t="Include">
             <e p="CartoonFX Free.txt" t="Include" />
             <e p="Demo" t="Include">
@@ -82,18 +57,33 @@
             </e>
           </e>
         </e>
-        <e p="Laterns_and_candles" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="CameraFacing.cs" t="Include" />
-            <e p="ExtendedFlycam.cs" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="Game" t="Include">
+            <e p="Flying Tree" t="Include">
+              <e p="Materials" t="Include">
+                <e p="Leafs.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Golem" t="Include">
+              <e p="shader" t="Include">
+                <e p="Toon2side-Lighted.shader" t="Include" />
+              </e>
+            </e>
           </e>
-          <e p="Shaders" t="Include">
-            <e p="GlassStainedBumpDistort.shader" t="Include" />
-          </e>
-        </e>
-        <e p="RootVegetables" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="Rotate.cs" t="Include" />
+          <e p="UltimateDungeonPack" t="Include">
+            <e p="Scenes" t="Include">
+              <e p="Demo" t="Include">
+                <e p="FPControls" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CharacterController.cs" t="Include" />
+                    <e p="MouseCamLook.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="LightImprove.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -451,21 +441,6 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
-          </e>
-        </e>
-        <e p="UltimateDungeonPack" t="Include">
-          <e p="Scenes" t="Include">
-            <e p="Demo" t="Include">
-              <e p="FPControls" t="Include">
-                <e p="Scripts" t="Include">
-                  <e p="CharacterController.cs" t="Include" />
-                  <e p="MouseCamLook.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="LightImprove.cs" t="Include" />
           </e>
         </e>
       </e>
