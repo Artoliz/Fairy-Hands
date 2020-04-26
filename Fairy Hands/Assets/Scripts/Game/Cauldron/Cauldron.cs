@@ -42,10 +42,10 @@ public class Cauldron : MonoBehaviour
                     break;
                 }
             }
-            Debug.Log("Recette créée!");
+            Debug.Log("Recette créée! Jouer l'animation!");
         } else
         {
-            Debug.Log("Recette foirée...");
+            Debug.Log("Recette foirée... Jouer l'animation!");
         }
         EmptyCauldron();
     }

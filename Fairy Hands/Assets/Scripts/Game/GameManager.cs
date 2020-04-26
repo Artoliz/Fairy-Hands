@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private Dictionary<RecipeName, Tuple<int, int>> gameRecipes = new Dictionary<RecipeName, Tuple<int, int>>();
     internal Dictionary<RecipeName, Tuple<int, int>> GameRecipes { get => gameRecipes; set => gameRecipes = value; }
 
+    [SerializeField] private AutoBookController Book = null;
+
     private void Awake()
     {
         Instance = this;
@@ -24,12 +26,16 @@ public class GameManager : MonoBehaviour
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
-        //foreach (var recipe in Recipes.Keys)
-        //{
-        //    var require = Recipes[recipe];
-        //    if (AreIngredientsMatch(require, ingredients))
-        //        return true;
-        //}
+        foreach (var recipe in Recipes)
+        {
+            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && gameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].Item1 < GameRecipes[recipe.Name].Item2)
+            {
+             //   GameRecipes[recipe.Name].Item1 += 1;
+                //if (Book != null)
+                //    Book.RecipeDone(recipe.Name);
+                return true;
+            }
+        }
         return false;
     }
 
@@ -121,6 +127,7 @@ public class GameManager : MonoBehaviour
                 GameRecipes.Add((RecipeName)indexRecipe, new Tuple<int, int>(0, UnityEngine.Random.Range(1, 3)));
         }
 
-        // Send To Book
+        //if (Book != null)
+        //    Book.CreateBook(GameRecipes);
     }
 }
