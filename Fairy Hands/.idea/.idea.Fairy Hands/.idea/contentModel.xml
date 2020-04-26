@@ -13,7 +13,6 @@
             <e p="BookTransitionState.cs" t="Include" />
             <e p="BookUIButtonController.cs" t="Include" />
             <e p="Demo" t="Include">
-              <e p="AutoBookController.cs" t="Include" />
               <e p="BookEventListener.cs" t="Include" />
               <e p="DemoBookController.cs" t="Include" />
             </e>
@@ -26,6 +25,9 @@
               <e p="CharMovement.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="BomJ MeatHammer" t="Include">
+          <e p="readme.txt" t="Include" />
         </e>
         <e p="Flying_Tree" t="Include">
           <e p="Materials" t="Include">
@@ -95,12 +97,32 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Shelf" t="Include">
-            <e p="Getter.cs" t="Include" />
-            <e p="Shelf.cs" t="Include" />
-          </e>
-          <e p="VR" t="Include">
-            <e p="BasicInteractions.cs" t="Include" />
+          <e p="Game" t="Include">
+            <e p="Book" t="Include">
+              <e p="RecipesBook" t="Include">
+                <e p="AutoBookController.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Cauldron" t="Include">
+              <e p="Cauldron.cs" t="Include" />
+              <e p="Cook.cs" t="Include" />
+            </e>
+            <e p="GameManager.cs" t="Include" />
+            <e p="Ingredients" t="Include">
+              <e p="Board.cs" t="Include" />
+              <e p="Cut.cs" t="Include" />
+              <e p="Ingredient.cs" t="Include" />
+              <e p="Modifier.cs" t="Include" />
+              <e p="ProgressBarCustom.cs" t="Include" />
+            </e>
+            <e p="Recipe.cs" t="Include" />
+            <e p="Shelf" t="Include">
+              <e p="Getter.cs" t="Include" />
+              <e p="Shelf.cs" t="Include" />
+            </e>
+            <e p="VR" t="Include">
+              <e p="BasicInteractions.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="SteamVR" t="Include">
@@ -399,6 +421,34 @@
           <e p="SteamVR_Input_Actions.cs" t="Include" />
           <e p="SteamVR_Input_ActionSets.cs" t="Include" />
           <e p="SteamVR_Input_Initialization.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
         <e p="UltimateDungeonPack" t="Include">
           <e p="Scenes" t="Include">
