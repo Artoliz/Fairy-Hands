@@ -115,10 +115,12 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < nbRecipe; i++)
         {
             int indexRecipe = UnityEngine.Random.Range(0, 5);
-            if (GameRecipes.ContainsKey(indexRecipe))
-            {
-
-            }
+            if (GameRecipes.ContainsKey((RecipeName)indexRecipe))
+                i -= 1;
+            else
+                GameRecipes.Add((RecipeName)indexRecipe, new Tuple<int, int>(0, UnityEngine.Random.Range(1, 3)));
         }
+
+        // Send To Book
     }
 }
