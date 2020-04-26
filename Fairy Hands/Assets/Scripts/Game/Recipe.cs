@@ -1,8 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
-enum Recipe
+enum RecipeName
 {
-    None,
-    Invisibility,
-    Strength
+    Polynectare = 0,
+    Heal,
+    Levitation,
+    Fear,
+    BreathingUnderwater,
+    Nyctalope
+};
+
+struct Recipe
+{
+    public RecipeName Name;
+    public Dictionary<Ingredient.Type, int> Ingredients;
 };
