@@ -28,9 +28,6 @@ public class Menu : MonoBehaviour
         {
             if (hand != null)
             {
-                //!!! Launch game, stay on the same scene, just launch the recipes... !!!
-                
-                Debug.Log("Je click");
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
