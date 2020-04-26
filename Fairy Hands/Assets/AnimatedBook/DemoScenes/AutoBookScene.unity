@@ -772,6 +772,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c50f5acd38dd644eaab6c5535ee9f27, type: 3}
+--- !u!114 &1673316642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11469462, guid: 3c50f5acd38dd644eaab6c5535ee9f27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1673316641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad25d2ad52e0174398933c0c56e27bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1715661154
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +823,7 @@ MonoBehaviour:
   - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
   - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
   - {fileID: 140354, guid: be8ef39e87e91d649b47ba050389712d, type: 3}
-  bookController: {fileID: 0}
+  bookController: {fileID: 1673316642}
   pageBackground: []
 --- !u!4 &1715661156
 Transform:

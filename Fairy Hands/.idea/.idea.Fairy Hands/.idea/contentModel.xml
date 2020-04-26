@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\kelli\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -19,17 +19,13 @@
             </e>
           </e>
         </e>
-        <e p="Chibi_Mummy" t="Include">
-          <e p="Misc" t="Include">
+        <e p="Animations" t="Include">
+          <e p="Mummy" t="Include">
             <e p="Scripts" t="Include">
               <e p="buttonControl_script.cs" t="Include" />
               <e p="CharMovement.cs" t="Include" />
             </e>
           </e>
-          <e p="readme.txt" t="Include" />
-        </e>
-        <e p="fantasySpider" t="Include">
-          <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
         <e p="Flying_Tree" t="Include">
           <e p="Materials" t="Include">
@@ -84,9 +80,6 @@
             </e>
           </e>
         </e>
-        <e p="Kitchen_Asset" t="Include">
-          <e p="readme.txt" t="Include" />
-        </e>
         <e p="Laterns_and_candles" t="Include">
           <e p="Scripts" t="Include">
             <e p="CameraFacing.cs" t="Include" />
@@ -102,6 +95,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Shelf" t="Include">
+            <e p="Getter.cs" t="Include" />
+            <e p="Shelf.cs" t="Include" />
+          </e>
           <e p="VR" t="Include">
             <e p="BasicInteractions.cs" t="Include" />
           </e>
