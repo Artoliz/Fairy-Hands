@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 enum RecipeName
 {
-    Polynectare,
+    Polynectare = 0,
     Heal,
     Levitation,
     Fear,

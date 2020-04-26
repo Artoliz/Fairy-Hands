@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,11 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    //private Dictionary<Recipe, Tuple<int, int>> GameRecipes = new Dictionary<Recipe, Tuple<int, int>>();
-
-    //private Dictionary<Recipe, Dictionary<Ingredient.Type, int>> Recipes = new Dictionary<Recipe, Dictionary<Ingredient.Type, int>>();
-
     private List<Recipe> Recipes = new List<Recipe>();
+
+    private Dictionary<RecipeName, Tuple<int, int>> gameRecipes = new Dictionary<RecipeName, Tuple<int, int>>();
+    internal Dictionary<RecipeName, Tuple<int, int>> GameRecipes { get => gameRecipes; set => gameRecipes = value; }
 
     private void Awake()
     {
@@ -21,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InitRecipes();
+        InitGameRecipes();
     }
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
@@ -107,5 +106,19 @@ public class GameManager : MonoBehaviour
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
+    }
+
+    private void InitGameRecipes()
+    {
+        int nbRecipe = UnityEngine.Random.Range(4, 6);
+
+        for (int i = 0; i < nbRecipe; i++)
+        {
+            int indexRecipe = UnityEngine.Random.Range(0, 5);
+            if (GameRecipes.ContainsKey(indexRecipe))
+            {
+
+            }
+        }
     }
 }
