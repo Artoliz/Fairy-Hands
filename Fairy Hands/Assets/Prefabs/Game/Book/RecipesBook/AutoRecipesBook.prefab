@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752809233909146218}
-  - component: {fileID: 2934427977841734419}
+  - component: {fileID: 5376554363214903690}
   m_Layer: 0
   m_Name: AutoRecipesBook
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2934427977841734419
+--- !u!114 &5376554363214903690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,19 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101458506451953296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6712d1229f6db9428c8160e21e461f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 00fe43e3a5b522841b0d3e6c21c358c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UiPages:
-  - {fileID: 8010669036043822725, guid: 3f322eaa2554f0348bd3ff082a020f72, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 8687228208305671894, guid: b25ba1137aacec643b78a8e58efd3e8f, type: 3}
-  - {fileID: 140354, guid: be8ef39e87e91d649b47ba050389712d, type: 3}
+  UiPages: []
   bookController: {fileID: 4747929967133155272}
   pageBackground: []
 --- !u!1001 &4747929967139511646
