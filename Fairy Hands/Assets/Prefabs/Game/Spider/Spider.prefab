@@ -1633,6 +1633,7 @@ GameObject:
   - component: {fileID: 114889535921396164}
   - component: {fileID: 114422906712841382}
   - component: {fileID: 260567554638431821}
+  - component: {fileID: 114030083006907104}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Ingredient
@@ -1856,6 +1857,8 @@ MonoBehaviour:
   NextModifier: {fileID: 7912718327297828897, guid: 46dca3b076196374b8e582be897a0aa7,
     type: 3}
   MaxHit: 8
+  MaxHitTotal: 0
+  CurrentHit: 0
 --- !u!65 &260567554638431821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1869,6 +1872,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4790261, y: 0.5614177, z: 1.6236382}
   m_Center: {x: -0.022595525, y: 0.29809684, z: -0.1762458}
+--- !u!114 &114030083006907104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005101148448489242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00809001f3d6144ab2997b53eb99073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _type: 0
 --- !u!1 &1005101148448489244
 GameObject:
   m_ObjectHideFlags: 0
