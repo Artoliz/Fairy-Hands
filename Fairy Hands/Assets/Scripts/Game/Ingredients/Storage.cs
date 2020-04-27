@@ -11,7 +11,7 @@ public class Storage : MonoBehaviour
 
     public GameObject[] Getters = null;
 
-    private void Start()
+    private void Awake()
     {
         foreach (Transform child in transform)
             _positions.Add(child.transform.localPosition);
