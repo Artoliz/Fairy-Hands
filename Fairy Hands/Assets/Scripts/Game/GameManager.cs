@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<RecipeName, Pair<int, int>> GameRecipes = new Dictionary<RecipeName, Pair<int, int>>();
 
     [SerializeField] private AutoBookController Book = null;
+    [SerializeField] private Storage Storage = null;
 
     private void Awake()
     {
@@ -130,6 +131,24 @@ public class GameManager : MonoBehaviour
                 i -= 1;
             else
                 GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+        }
+
+        if (Storage != null)
+        {
+            List<Ingredient.Type> types = new List<Ingredient.Type>();
+
+            foreach (Recipe recipe in Recipes)
+            {
+                if (GameRecipes.ContainsKey(recipe.Name))
+                {
+                    foreach (Ingredient.Type ing in recipe.Ingredients.Keys)
+                    {
+                        if (!types.Contains(ing))
+                            types.Add(ing);
+                    }
+                }
+            }
+            Storage.GenerateIngredientsGetter(types);
         }
 
         //if (Book != null)
