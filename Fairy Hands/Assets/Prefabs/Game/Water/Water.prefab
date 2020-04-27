@@ -11,16 +11,16 @@ GameObject:
   - component: {fileID: 8385242052075323531}
   - component: {fileID: 8385242052076126379}
   - component: {fileID: 8385242052077224555}
-  - component: {fileID: 8385242052075035818}
   - component: {fileID: 8855379919888820854}
   - component: {fileID: 9068057773315820015}
   - component: {fileID: 5946498658203430714}
   - component: {fileID: 2737134639259063018}
   - component: {fileID: 1660455622753664277}
   - component: {fileID: 1653032137271561344}
+  - component: {fileID: 212555390798833855}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8385242052075035819}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -3, y: 0, z: 5}
   m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children: []
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8385242052075035818
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8385242052075035819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: e873cbc7c65c12b409ffa8b357ef3039, type: 3}
 --- !u!114 &8855379919888820854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,3 +248,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 6
+--- !u!65 &212555390798833855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385242052075035819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0011773226, y: 0.0013594552, z: 0.0024754119}
+  m_Center: {x: 0, y: 0, z: 0.0012377064}

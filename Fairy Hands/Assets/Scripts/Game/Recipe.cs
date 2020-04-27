@@ -7,8 +7,8 @@ enum RecipeName
     Heal,
     Levitation,
     Fear,
-    BreathingUnderwater,
-    Nyctalope
+    Nyctalope,
+    BreathingUnderwater
 };
 
 struct Recipe

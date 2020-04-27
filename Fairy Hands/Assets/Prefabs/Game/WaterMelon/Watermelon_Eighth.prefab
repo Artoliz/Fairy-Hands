@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3104950684872464024}
   m_Layer: 0
   m_Name: Watermelon_Eighth
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00809001f3d6144ab2997b53eb99073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  State: 0
+  _state: 0
+  _type: 0
 --- !u!114 &3920583528871654680
 MonoBehaviour:
   m_ObjectHideFlags: 0

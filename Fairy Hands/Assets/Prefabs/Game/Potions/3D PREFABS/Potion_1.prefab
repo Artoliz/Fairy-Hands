@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 6056240379479065331}
   m_Layer: 0
   m_Name: GPVFX_Cork_GPVFX_Corks
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 6074801083582283439}
   m_Layer: 0
   m_Name: GPVFX_CORK
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 6079618685615772575}
   m_Layer: 0
   m_Name: GPVFX_Bottle_A
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 6056411732390458647}
   m_Layer: 0
   m_Name: Fill
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

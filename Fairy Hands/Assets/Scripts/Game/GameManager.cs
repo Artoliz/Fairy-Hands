@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 
     private List<Recipe> Recipes = new List<Recipe>();
 
-    private Dictionary<RecipeName, Tuple<int, int>> gameRecipes = new Dictionary<RecipeName, Tuple<int, int>>();
-    internal Dictionary<RecipeName, Tuple<int, int>> GameRecipes { get => gameRecipes; set => gameRecipes = value; }
+    private Dictionary<RecipeName, Pair<int, int>> GameRecipes = new Dictionary<RecipeName, Pair<int, int>>();
 
     [SerializeField] private AutoBookController Book = null;
 
@@ -26,13 +25,19 @@ public class GameManager : MonoBehaviour
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
+        foreach (var key in ingredients.Keys)
+            Debug.Log(key + " -> " + ingredients[key]);
+
         foreach (var recipe in Recipes)
         {
-            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && gameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].Item1 < GameRecipes[recipe.Name].Item2)
+            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
             {
-             //   GameRecipes[recipe.Name].Item1 += 1;
+                GameRecipes[recipe.Name].First += 1;
+
                 //if (Book != null)
                 //    Book.RecipeDone(recipe.Name);
+
+                CheckIfAllRecipesAreDone();
                 return true;
             }
         }
@@ -41,9 +46,9 @@ public class GameManager : MonoBehaviour
 
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> required, Dictionary<Ingredient.Type, int> given)
     {
-        foreach (var requiredIngredient in required.Keys)
+        foreach (var givenIngredients in given.Keys)
         {
-            if (given[requiredIngredient] != required[requiredIngredient])
+            if (!required.ContainsKey(givenIngredients) || required[givenIngredients] != given[givenIngredients])
                 return false;
         }
         return true;
@@ -105,9 +110,9 @@ public class GameManager : MonoBehaviour
 
         // Nyctalope
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Eye, 5);
-        ingredients.Add(Ingredient.Type.Bat, 1);
-        ingredients.Add(Ingredient.Type.Blood, 3);
+        ingredients.Add(Ingredient.Type.Eye, 4);
+        ingredients.Add(Ingredient.Type.Bat, 2);
+        ingredients.Add(Ingredient.Type.Blood, 1);
         recipe.Name = RecipeName.Nyctalope;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -124,10 +129,26 @@ public class GameManager : MonoBehaviour
             if (GameRecipes.ContainsKey((RecipeName)indexRecipe))
                 i -= 1;
             else
-                GameRecipes.Add((RecipeName)indexRecipe, new Tuple<int, int>(0, UnityEngine.Random.Range(1, 3)));
+                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
         }
 
         //if (Book != null)
         //    Book.CreateBook(GameRecipes);
+    }
+
+    private void CheckIfAllRecipesAreDone()
+    {
+        int nbDone = 0;
+
+        foreach (var value in GameRecipes.Values)
+        {
+            if (value.First == value.Second)
+                nbDone += 1;
+        }
+
+        if (nbDone == GameRecipes.Count)
+        {
+            Debug.Log("Le jeu est fini: Toutes les recettes sont faites!");
+        }
     }
 }

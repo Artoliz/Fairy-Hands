@@ -1,27 +1,25 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class Cauldron : MonoBehaviour
 {
     public Dictionary<Ingredient.Type, int> Ingredients = new Dictionary<Ingredient.Type, int>();
 
     public Material[] PotionVisuals = null;
-    public GameObject[] Potions = null;
 
     public void AddIngredient(Ingredient.Type ingredient)
     {
         if (ingredient == Ingredient.Type.None)
         {
-            // Bad Ingredient.
+            EmptyCauldron();
             return;
         }
 
-        if (Ingredients[ingredient] == 0)
+        if (!Ingredients.ContainsKey(ingredient))
             Ingredients.Add(ingredient, 1);
         else
             Ingredients[ingredient] += 1;
-
-        Debug.Log("Add ingredient: " + ingredient);
     }
 
     public void EmptyCauldron()
@@ -29,20 +27,21 @@ public class Cauldron : MonoBehaviour
         Ingredients.Clear();
     }
 
-    public void CreateRecipe()
+    public void CreateRecipe(GameObject emptyPotion)
     {
         if (GameManager.Instance.IsRecipeExist(Ingredients))
         {
-            GameObject potion = Instantiate(Potions[Random.Range(0, Potions.Length - 1)]);
-            foreach (Transform child in potion.transform)
+            foreach (Transform child in emptyPotion.transform)
             {
                 if (child.name == "Fill")
                 {
                     child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
+
+                    Debug.Log("Recette créée! Jouer l'animation!");
+
                     break;
                 }
             }
-            Debug.Log("Recette créée! Jouer l'animation!");
         } else
         {
             Debug.Log("Recette foirée... Jouer l'animation!");

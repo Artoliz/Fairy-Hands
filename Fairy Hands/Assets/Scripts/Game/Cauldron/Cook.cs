@@ -16,6 +16,7 @@ public class Cook : MonoBehaviour
         if (other.CompareTag("Ingredient") && _cauldron != null)
         {
             _cauldron.AddIngredient(other.GetComponent<Ingredient>()._type);
+            Destroy(other.gameObject);
         }
     }
 }

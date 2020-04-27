@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3173021616467009597}
   - component: {fileID: 4864645525706752180}
   - component: {fileID: 1090284860976350876}
-  - component: {fileID: 9153412342814408748}
   m_Layer: 0
   m_Name: Cauldron_LOD0
   m_TagString: Untagged
@@ -78,20 +77,76 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &9153412342814408748
-MeshCollider:
+--- !u!114 &7877878129591907335
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153825131445111868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 2009614190311544502}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300008, guid: 125d7496f5311f244a1d565c7c41c3b3, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7ed1b37aabd10499bd15740b0f5f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+--- !u!1 &2025041839604029596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514755953411511036}
+  - component: {fileID: 226122943617618366}
+  - component: {fileID: 1911555519}
+  m_Layer: 0
+  m_Name: FillPotions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &514755953411511036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025041839604029596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2314387756545095740}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &226122943617618366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025041839604029596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.1, z: 0.8}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1911555519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025041839604029596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fb6be927d92d8409a8117ee3cb7174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2604560075489722822
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +158,6 @@ GameObject:
   - component: {fileID: 5466573267227298605}
   - component: {fileID: 7862474875417413545}
   - component: {fileID: 6238774218436304452}
-  - component: {fileID: 9012850961209547541}
   m_Layer: 0
   m_Name: Cauldron_LOD1
   m_TagString: Untagged
@@ -170,20 +224,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &9012850961209547541
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604560075489722822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300004, guid: 125d7496f5311f244a1d565c7c41c3b3, type: 3}
 --- !u!1 &3103697707223852107
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2314387756545095740}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &8802648101794422798
 SphereCollider:
@@ -305,7 +345,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!114 &9199424161150548309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +369,6 @@ GameObject:
   - component: {fileID: 7070156375293951802}
   - component: {fileID: 8038679414650267356}
   - component: {fileID: 3322166231048432707}
-  - component: {fileID: 2148821675667570823}
   m_Layer: 0
   m_Name: Cauldron_LOD2
   m_TagString: Untagged
@@ -396,20 +435,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2148821675667570823
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7359957072975777684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 125d7496f5311f244a1d565c7c41c3b3, type: 3}
 --- !u!1 &8136787689515153932
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +545,9 @@ Transform:
   - {fileID: 7070156375293951802}
   - {fileID: 9049939810556735754}
   - {fileID: 6879771462642511693}
+  - {fileID: 514755953411511036}
   - {fileID: 3263278954046139654}
+  - {fileID: 2009614190311705238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -542,9 +569,85 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c29de21f41603497c97dcf1376d27872, type: 2}
   - {fileID: 2100000, guid: edf176e77514c40e683150a038a10cc7, type: 2}
   - {fileID: 2100000, guid: a8c9b52c691f448b59ae3b6653ad82d4, type: 2}
-  Potions:
-  - {fileID: 6077676655353240819, guid: f0c6f33280734ac408a656cfa1dc935a, type: 3}
-  - {fileID: 5268847877155844427, guid: 4a4d7fa14e65be04f9934bb91dafb9bd, type: 3}
-  - {fileID: 104977053500982449, guid: e7804a4ced059d947b344707fe9b5488, type: 3}
-  - {fileID: 958111703823767877, guid: 9bf2dbda1bfac514294ecc29aa0cc954, type: 3}
-  - {fileID: 9088430995443123179, guid: 695062a24aeb91247ab820531757784a, type: 3}
+  - {fileID: 2100000, guid: 81f6511665109a549b5ef9b64d810f03, type: 2}
+--- !u!1001 &1537146712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2314387756545095740}
+    m_Modifications:
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5477488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.83664286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -66.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009614189395732974, guid: 0979948703c7d97418dbb3ce0ac790e1,
+        type: 3}
+      propertyPath: m_Name
+      value: woodenspponblend
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0979948703c7d97418dbb3ce0ac790e1, type: 3}
+--- !u!1 &2009614190311544502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2009614189395732974, guid: 0979948703c7d97418dbb3ce0ac790e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537146712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2009614190311705238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2009614189395703246, guid: 0979948703c7d97418dbb3ce0ac790e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537146712}
+  m_PrefabAsset: {fileID: 0}
