@@ -138,13 +138,13 @@ public class AnimatedBookController : MonoBehaviour
     {
         InitReferences();
     }
-    
+
     // Use this for initialization
     public void Reset()
     {
         pagesUi.Clear();
         currentPage = 0;
-        
+
         // Set the turned and unturned rotation values
         pageUnturnedRotation = Quaternion.Euler(0, 89, 0);
         pageTurnedRotation = Quaternion.Euler(0, 271, 0);
@@ -153,15 +153,15 @@ public class AnimatedBookController : MonoBehaviour
         bookPages[1].page.gameObject.SetActive(false);
         bookPages[2].page.gameObject.SetActive(false);
 
-        if (pagesUi.Count == 0)
-        {
-            // Case where book have no page
-            bookPages[0].page.gameObject.SetActive(false);
-        }
-        else
-        {
-            ActivatePage(0, currentPage);
-        }
+//        if (pagesUi.Count == 0)
+//        {
+//            // Case where book have no page
+//            bookPages[0].page.gameObject.SetActive(false);
+//        }
+//        else
+//        {
+//            ActivatePage(0, currentPage);
+//        }
     }
 
     // Initialize the variables references
@@ -169,7 +169,7 @@ public class AnimatedBookController : MonoBehaviour
     {
         // Get the animator reference
         anim = GetComponent<Animator>();
-        
+
         // Get usefull references for all 3 book pages
         bookPages = new PageObjects[3];
 
@@ -182,12 +182,12 @@ public class AnimatedBookController : MonoBehaviour
             page.VersoImage = pageTransform.Find("Verso").Find("CanvasVerso").GetComponent<Image>();
             bookPages[i] = page;
         }
-        
     }
 
     // Activate the page number i, setting it's sprite and UI
     private void ActivatePage(int i, int pageIndex)
     {
+        Debug.Log("Active");
         // Activate the current page's gameobject
         bookPages[i].page.gameObject.SetActive(true);
 
@@ -210,8 +210,17 @@ public class AnimatedBookController : MonoBehaviour
         // Setting the Ui Recto
         if (pagesUi[pageIndex].UiRecto != null)
         {
+            Debug.Log(pagesUi[pageIndex].UiRecto.gameObject.name);
             bookPages[i].UiRecto = Instantiate(pagesUi[pageIndex].UiRecto);
+//            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(5);
             bookPages[i].UiRecto.transform.SetParent(bookPages[i].RectoImage.transform, false);
+            bookPages[i].UiRecto.GetComponentInChildren<UiButtonController>().ActivateRightButton();
+
+            int done = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetDoneRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(done);
+
+            int toDo = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetToDo(toDo);
         }
 
         if (bookPages[i].UiVerso != null)
@@ -235,6 +244,11 @@ public class AnimatedBookController : MonoBehaviour
         {
             bookPages[i].UiVerso = Instantiate(pagesUi[pageIndex].UiVerso);
             bookPages[i].UiVerso.transform.SetParent(bookPages[i].VersoImage.transform, false);
+            UiButtonController buttonController = bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>();
+            if (buttonController != null)
+            {
+                buttonController.ActivateLeftButton();
+            }
         }
     }
 
@@ -280,14 +294,14 @@ public class AnimatedBookController : MonoBehaviour
         anim.SetTrigger("CloseBookRight");
         Reset();
     }
-       
+
     public void OpenBook()
     {
         if (pagesUi.Count > 0)
             ActivatePage(0, currentPage);
         anim.SetTrigger("OpenBook");
     }
-    
+
     public void TurnToNextPage()
     {
         // If book is closed, open it

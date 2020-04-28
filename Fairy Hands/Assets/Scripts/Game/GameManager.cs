@@ -151,8 +151,8 @@ public class GameManager : MonoBehaviour
             Storage.GenerateIngredientsGetter(types);
         }
 
-        //if (Book != null)
-        //    Book.CreateBook(GameRecipes);
+        if (Book != null)
+            Book.CreateBook(GameRecipes);
     }
 
     private void CheckIfAllRecipesAreDone()

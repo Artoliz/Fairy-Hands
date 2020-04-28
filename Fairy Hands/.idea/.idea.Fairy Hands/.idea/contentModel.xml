@@ -91,6 +91,7 @@
             <e p="Book" t="Include">
               <e p="RecipesBook" t="Include">
                 <e p="AutoBookController.cs" t="Include" />
+                <e p="AutoBookRecipeCounter.cs" t="Include" />
                 <e p="UiButtonController.cs" t="Include" />
               </e>
             </e>
@@ -104,7 +105,6 @@
             <e p="GameManager.cs" t="Include" />
             <e p="Ingredients" t="Include">
               <e p="Board.cs" t="Include" />
-              <e p="Cut.cs" t="Include" />
               <e p="Getter.cs" t="Include" />
               <e p="Ingredient.cs" t="Include" />
               <e p="Modifier.cs" t="Include" />
@@ -113,6 +113,11 @@
             </e>
             <e p="Pair.cs" t="Include" />
             <e p="Recipe.cs" t="Include" />
+            <e p="Tools" t="Include">
+              <e p="Crush.cs" t="Include" />
+              <e p="Cut.cs" t="Include" />
+              <e p="Grate.cs" t="Include" />
+            </e>
             <e p="VR" t="Include">
               <e p="BasicInteractions.cs" t="Include" />
               <e p="Pointer.cs" t="Include" />

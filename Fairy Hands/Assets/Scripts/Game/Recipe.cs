@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-enum RecipeName
+public enum RecipeName
 {
     Polynectare = 0,
     Heal,

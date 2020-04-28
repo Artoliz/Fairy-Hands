@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class UiButtonController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject leftButton;
+    public GameObject rightButton;
+
+    void Awake()
     {
-        
+        leftButton.SetActive(false);
+        rightButton.SetActive(false);
+    }
+    
+    public void ActivateLeftButton()
+    {
+        leftButton.SetActive(true);
+        rightButton.SetActive(false);
+    }
+    
+    public void ActivateRightButton()
+    {
+        leftButton.SetActive(false);
+        rightButton.SetActive(true);
     }
 }

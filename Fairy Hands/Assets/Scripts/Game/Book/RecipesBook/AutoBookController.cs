@@ -13,47 +13,82 @@ public class AutoBookController : MonoBehaviour
     public Sprite[] pageBackground;
     private int pageStyleIndex = 0;
 
-    //void CreateBook(Dictionary<RecipeName, Pair<int, int>> gameRecipes)
-    //{
-    void Start()
+    private Dictionary<RecipeName, Pair<int, int>> _gameRecipes;
+
+    public void CreateBook(Dictionary<RecipeName, Pair<int, int>> gameRecipes)
     {
+
+        _gameRecipes = gameRecipes;
+        
         bookController.Reset();
         int i = 0;
         bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
         AnimatedBookController.Page page = bookController.pagesUi[0];
-//        foreach (var gameRecipe in gameRecipes)
-        //      {
-        //        var recipeName = gameRecipe.Key.ToString();
-
-        foreach (var uiPage in UiPages)
+        foreach (var gameRecipe in _gameRecipes)
         {
-            //          if (uiPage.name.Contains(recipeName))
-//                {
-            if (i >= bookController.pagesUi.Count)
-            {
-                bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
-                page = bookController.pagesUi[i];
-            }
+            var recipeName = gameRecipe.Key.ToString();
 
-            if (page.UiRecto == null)
+            foreach (var uiPage in UiPages)
             {
-                page.UiRecto = uiPage;
-            }
-            else
-            {
-                page.UiVerso = uiPage;
-                i++;
-            }
+                if (uiPage.name.Contains(recipeName))
+                {
 
-//                    break;
-//                }
+                    if (i >= bookController.pagesUi.Count)
+                    {
+                        bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
+                        page = bookController.pagesUi[i];
+                    }
+
+                    if (page.UiRecto == null)
+                    {
+                        page.UiRecto = uiPage;
+                        page.UiRecto.GetComponentInChildren<UiButtonController>().ActivateRightButton();
+                    }
+                    else
+                    {
+                        page.UiVerso = uiPage;
+                        page.UiVerso.GetComponentInChildren<UiButtonController>().ActivateLeftButton();
+                        i++;
+                    }
+
+                    break;
+                }
+            }
         }
     }
-//}
 
-//    void RecipeDone(RecipeName name)
-//    {
-//    }
+    public void RecipeDone(RecipeName name)
+    {
+        _gameRecipes[name].First++;
+    }
+
+    public int GetToDoRecipe(string name)
+    {
+        foreach (var recipe in _gameRecipes)
+        {
+            string recipeName = recipe.Key.ToString();
+            Debug.Log(recipeName + " " + name);
+            if (name.Contains(recipeName))
+            {
+                return recipe.Value.Second;
+            }
+        }
+        return -1;
+    }
+    
+    public int GetDoneRecipe(string name)
+    {
+        foreach (var recipe in _gameRecipes)
+        {
+            string recipeName = recipe.Key.ToString();
+            if (name.Contains(recipeName))
+            {
+                return recipe.Value.First;
+            }
+        }
+        return -1;
+    }
+    
 
 // Control book with Left / Right arrows
     void Update()
@@ -77,7 +112,6 @@ public class AutoBookController : MonoBehaviour
         {
             if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.OPENED)
                 bookController.CloseBook();
-            //bookController.Reset();
             bookController.OpenBook();
         }
     }
