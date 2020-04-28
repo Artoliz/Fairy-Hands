@@ -171,13 +171,15 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         InitGameRecipes();
+        PlayerPoints = 0;
+        // Start Timer
     }
 
     public void RestartGame()
     {
+        Book.CloseBook();
         GameRecipes.Clear();
         PlayerPoints = 0;
-        //Book.CloseBook();
         InitGameRecipes();
         // Reset Timer
     }
@@ -185,7 +187,7 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         GameRecipes.Clear();
-        //Book.CloseBook();
+        Book.CloseBook();
         PlayerPoints = 0;
         // Stop Timer
     }
