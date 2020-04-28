@@ -187,7 +187,6 @@ public class AnimatedBookController : MonoBehaviour
     // Activate the page number i, setting it's sprite and UI
     private void ActivatePage(int i, int pageIndex)
     {
-        Debug.Log("Active");
         // Activate the current page's gameobject
         bookPages[i].page.gameObject.SetActive(true);
 
@@ -210,9 +209,7 @@ public class AnimatedBookController : MonoBehaviour
         // Setting the Ui Recto
         if (pagesUi[pageIndex].UiRecto != null)
         {
-            Debug.Log(pagesUi[pageIndex].UiRecto.gameObject.name);
             bookPages[i].UiRecto = Instantiate(pagesUi[pageIndex].UiRecto);
-//            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(5);
             bookPages[i].UiRecto.transform.SetParent(bookPages[i].RectoImage.transform, false);
             bookPages[i].UiRecto.GetComponentInChildren<UiButtonController>().ActivateRightButton();
 
@@ -244,11 +241,15 @@ public class AnimatedBookController : MonoBehaviour
         {
             bookPages[i].UiVerso = Instantiate(pagesUi[pageIndex].UiVerso);
             bookPages[i].UiVerso.transform.SetParent(bookPages[i].VersoImage.transform, false);
-            UiButtonController buttonController = bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>();
-            if (buttonController != null)
-            {
-                buttonController.ActivateLeftButton();
-            }
+            
+            int done = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetDoneRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(done);
+
+            int toDo = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetToDo(toDo);
+
+            bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>().ActivateRightButton();
+
         }
     }
 
