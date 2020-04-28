@@ -24,24 +24,6 @@ public class GameManager : MonoBehaviour
         InitGameRecipes();
     }
 
-    public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
-    {
-        foreach (var recipe in Recipes)
-        {
-            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
-            {
-                GameRecipes[recipe.Name].First += 1;
-
-                if (Book != null)
-                    Book.RecipeDone(recipe.Name);
-
-                CheckIfAllRecipesAreDone();
-                return true;
-            }
-        }
-        return false;
-    }
-
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> required, Dictionary<Ingredient.Type, int> given)
     {
         foreach (var givenIngredients in given.Keys)
@@ -88,9 +70,7 @@ public class GameManager : MonoBehaviour
 
         // Fear
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Spider, 3);
-        ingredients.Add(Ingredient.Type.Apple, 1);
-        ingredients.Add(Ingredient.Type.Water, 2);
+        ingredients.Add(Ingredient.Type.Water, 1);
         recipe.Name = RecipeName.Fear;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -166,5 +146,43 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Le jeu est fini: Toutes les recettes sont faites!");
         }
+    }
+
+    public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
+    {
+        foreach (var recipe in Recipes)
+        {
+            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
+            {
+                GameRecipes[recipe.Name].First += 1;
+
+                if (Book != null)
+                    Book.RecipeDone(recipe.Name);
+
+                CheckIfAllRecipesAreDone();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void StartGame()
+    {
+
+    }
+
+    public void RestartGame()
+    {
+
+    }
+
+    public void StopGame()
+    {
+
+    }
+
+    public void ExitGame()
+    {
+
     }
 }
