@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Valve.VR.InteractionSystem;
 
 public class BookUIButtonController : MonoBehaviour {
 
@@ -15,6 +16,12 @@ public class BookUIButtonController : MonoBehaviour {
 	}
 
 	public void CallTurnPreviousPage() {
-		animatedBookController.TurnToPreviousPage ();
+		foreach (var hand in Player.instance.hands)
+		{
+			if (hand != null)
+			{
+				animatedBookController.TurnToPreviousPage ();
+			}
+		}
 	}
 }

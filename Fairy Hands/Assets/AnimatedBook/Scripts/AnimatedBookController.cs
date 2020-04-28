@@ -134,11 +134,17 @@ public class AnimatedBookController : MonoBehaviour
         return bookPages;
     }
 
-    // Use this for initialization
-    void Start()
+    void Awake()
     {
         InitReferences();
-
+    }
+    
+    // Use this for initialization
+    public void Reset()
+    {
+        pagesUi.Clear();
+        currentPage = 0;
+        
         // Set the turned and unturned rotation values
         pageUnturnedRotation = Quaternion.Euler(0, 89, 0);
         pageTurnedRotation = Quaternion.Euler(0, 271, 0);
@@ -163,9 +169,10 @@ public class AnimatedBookController : MonoBehaviour
     {
         // Get the animator reference
         anim = GetComponent<Animator>();
-
+        
         // Get usefull references for all 3 book pages
         bookPages = new PageObjects[3];
+
         for (int i = 0; i < 3; i++)
         {
             PageObjects page = new PageObjects();
@@ -175,6 +182,7 @@ public class AnimatedBookController : MonoBehaviour
             page.VersoImage = pageTransform.Find("Verso").Find("CanvasVerso").GetComponent<Image>();
             bookPages[i] = page;
         }
+        
     }
 
     // Activate the page number i, setting it's sprite and UI
@@ -267,11 +275,26 @@ public class AnimatedBookController : MonoBehaviour
         }
     }
 
+    public void CloseBook()
+    {
+        anim.SetTrigger("CloseBookRight");
+        Reset();
+    }
+       
+    public void OpenBook()
+    {
+        if (pagesUi.Count > 0)
+            ActivatePage(0, currentPage);
+        anim.SetTrigger("OpenBook");
+    }
+    
     public void TurnToNextPage()
     {
         // If book is closed, open it
         if (state == BOOK_STATE.CLOSED && currentPage == 0)
         {
+            if (pagesUi.Count > 0)
+                ActivatePage(0, currentPage);
             anim.SetTrigger("OpenBook");
         }
         // If book is opened ...

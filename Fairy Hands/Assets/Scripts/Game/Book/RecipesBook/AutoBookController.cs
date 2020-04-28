@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Valve.Newtonsoft.Json.Utilities;
 
 public class AutoBookController : MonoBehaviour
@@ -12,31 +13,49 @@ public class AutoBookController : MonoBehaviour
     public Sprite[] pageBackground;
     private int pageStyleIndex = 0;
 
-    // Init pages at Start
-    void Awake()
+    //void CreateBook(Dictionary<RecipeName, Pair<int, int>> gameRecipes)
+    //{
+    void Start()
     {
-
+        bookController.Reset();
         int i = 0;
         bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
         AnimatedBookController.Page page = bookController.pagesUi[0];
-        
-        foreach (var uiPage in UiPages) {
+//        foreach (var gameRecipe in gameRecipes)
+        //      {
+        //        var recipeName = gameRecipe.Key.ToString();
 
-            if (i >= bookController.pagesUi.Count) {
+        foreach (var uiPage in UiPages)
+        {
+            //          if (uiPage.name.Contains(recipeName))
+//                {
+            if (i >= bookController.pagesUi.Count)
+            {
                 bookController.pagesUi.AddDistinct(new AnimatedBookController.Page());
                 page = bookController.pagesUi[i];
             }
-            
-            if (page.UiRecto == null) {
+
+            if (page.UiRecto == null)
+            {
                 page.UiRecto = uiPage;
-            } else {
+            }
+            else
+            {
                 page.UiVerso = uiPage;
                 i++;
             }
+
+//                    break;
+//                }
         }
     }
+//}
 
-    // Control book with Left / Right arrows
+//    void RecipeDone(RecipeName name)
+//    {
+//    }
+
+// Control book with Left / Right arrows
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -46,6 +65,20 @@ public class AutoBookController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             bookController.TurnToNextPage();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.OPENED)
+                bookController.CloseBook();
+            else if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.CLOSED)
+                bookController.OpenBook();
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.OPENED)
+                bookController.CloseBook();
+            //bookController.Reset();
+            bookController.OpenBook();
         }
     }
 
@@ -58,7 +91,6 @@ public class AutoBookController : MonoBehaviour
         }
 
         bookController.defaultBackground = pageBackground[pageStyleIndex];
-
         foreach (AnimatedBookController.PageObjects page in bookController.getPageObjects())
         {
             page.RectoImage.sprite = pageBackground[pageStyleIndex];
