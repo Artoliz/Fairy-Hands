@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class Chest : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class Chest : MonoBehaviour
 
     public void SetPotion(GameObject potion)
     {
+        foreach (Hand hand in Player.instance.hands)
+        {
+            if (hand.currentAttachedObject.name == potion.name)
+            {
+                hand.DetachObject(hand.currentAttachedObject);
+            }
+        }
+
         potion.transform.SetParent(transform);
         potion.transform.localPosition = _positions[_offset];
         _offset += 1;

@@ -30,6 +30,7 @@ public class Menu : MonoBehaviour
             {
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
+                GameManager.Instance.StartGame();
             }
         }
     }
@@ -51,10 +52,9 @@ public class Menu : MonoBehaviour
         {
             if (hand != null)
             {
-                //!!! Stop game but stay on the scene, just cancel the game !!!
-                
                 startMenu.SetActive(true);
                 gameMenu.SetActive(false);
+                GameManager.Instance.StopGame();
             }
         }
     }
@@ -65,7 +65,7 @@ public class Menu : MonoBehaviour
         {
             if (hand != null)
             {
-                //!!! Reset game here !!!
+                GameManager.Instance.RestartGame();
             }
         }
     }

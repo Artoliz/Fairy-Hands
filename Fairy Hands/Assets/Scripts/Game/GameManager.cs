@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public int PlayerPoints = 0;
+
     private List<Recipe> Recipes = new List<Recipe>();
 
     private Dictionary<RecipeName, Pair<int, int>> GameRecipes = new Dictionary<RecipeName, Pair<int, int>>();
@@ -21,7 +23,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InitRecipes();
-        InitGameRecipes();
     }
 
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> required, Dictionary<Ingredient.Type, int> given)
@@ -155,6 +156,7 @@ public class GameManager : MonoBehaviour
             if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
             {
                 GameRecipes[recipe.Name].First += 1;
+                PlayerPoints += recipe.Points;
 
                 if (Book != null)
                     Book.RecipeDone(recipe.Name);
@@ -168,21 +170,23 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-
+        InitGameRecipes();
     }
 
     public void RestartGame()
     {
-
+        GameRecipes.Clear();
+        PlayerPoints = 0;
+        //Book.CloseBook();
+        InitGameRecipes();
+        // Reset Timer
     }
 
     public void StopGame()
     {
-
-    }
-
-    public void ExitGame()
-    {
-
+        GameRecipes.Clear();
+        //Book.CloseBook();
+        PlayerPoints = 0;
+        // Stop Timer
     }
 }
