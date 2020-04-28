@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 2135231787}
   - component: {fileID: 6842332111690337812}
   - component: {fileID: 4393132583229275339}
+  - component: {fileID: 8293246114336954629}
   m_Layer: 0
   m_Name: Chibi Golem
   m_TagString: Ingredient
@@ -334,6 +335,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+--- !u!114 &8293246114336954629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ff206884b7ae24e95f7fedd4c1566e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextModifier: {fileID: 5952839814627837806, guid: 8f2757f9be4c6a0408cd7b857c6c979c,
+    type: 3}
+  MaxHit: 3
+  MaxHitTotal: 3
+  CurrentHit: 0
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Book: {fileID: 0}
+  Storage: {fileID: 0}
