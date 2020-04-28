@@ -59,7 +59,20 @@ public class AutoBookController : MonoBehaviour
 
     public void RecipeDone(RecipeName name)
     {
-        //_gameRecipes[name].First++;
+        foreach (var page in bookController.bookPages)
+        {
+            if (page.UiRecto.gameObject.name.Contains(name.ToString()))
+            {
+                page.UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(_gameRecipes[name].First);
+                break;
+            }
+            else if (page.UiVerso.gameObject.name.Contains(name.ToString()))
+            {
+                page.UiVerso.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(_gameRecipes[name].First);
+                break;
+            }
+            
+        }
     }
 
     public int GetToDoRecipe(string name)

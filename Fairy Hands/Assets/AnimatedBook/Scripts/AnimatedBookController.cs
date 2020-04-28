@@ -75,7 +75,7 @@ public class AnimatedBookController : MonoBehaviour
     /// <summary>
     /// Private variables
     /// </summary>
-    private PageObjects[] bookPages; // List of all 3 page's
+    public PageObjects[] bookPages; // List of all 3 page's
 
     private Quaternion pageUnturnedRotation; // Local rotation of an unturned page
     private Quaternion pageTurnedRotation; // Local rotation of a turned page
@@ -152,16 +152,7 @@ public class AnimatedBookController : MonoBehaviour
         // Deactivate invisible pages 2 and 3 at startupa
         bookPages[1].page.gameObject.SetActive(false);
         bookPages[2].page.gameObject.SetActive(false);
-
-//        if (pagesUi.Count == 0)
-//        {
-//            // Case where book have no page
-//            bookPages[0].page.gameObject.SetActive(false);
-//        }
-//        else
-//        {
-//            ActivatePage(0, currentPage);
-//        }
+        
     }
 
     // Initialize the variables references
