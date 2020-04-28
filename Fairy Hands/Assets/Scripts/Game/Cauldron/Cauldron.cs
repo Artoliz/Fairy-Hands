@@ -4,10 +4,12 @@ using Valve.VR.InteractionSystem;
 
 public class Cauldron : MonoBehaviour
 {
+    public Chest Chest;
+
     public Dictionary<Ingredient.Type, int> Ingredients = new Dictionary<Ingredient.Type, int>();
 
     public Material[] PotionVisuals = null;
-
+    
     public void AddIngredient(Ingredient.Type ingredient)
     {
         if (ingredient == Ingredient.Type.None)
@@ -37,7 +39,7 @@ public class Cauldron : MonoBehaviour
                 {
                     child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
 
-                    Debug.Log("Recette créée! Jouer l'animation!");
+                    Chest.SetPotion(emptyPotion);
 
                     break;
                 }

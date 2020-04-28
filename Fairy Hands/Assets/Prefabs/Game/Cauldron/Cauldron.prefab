@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2314387756545095740}
-  - component: {fileID: 2112646135547672288}
+  - component: {fileID: 2719822420787577264}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -551,7 +551,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2112646135547672288
+--- !u!114 &2719822420787577264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4db089d9da2c645aba637fc3500336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Chest: {fileID: 0}
   PotionVisuals:
   - {fileID: 2100000, guid: c5d81214b2af0493082fef7a9ef0dca2, type: 2}
   - {fileID: 2100000, guid: ec15a7f470319407ba348eb79f6879fe, type: 2}

@@ -3259,6 +3259,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2719822420787577264, guid: 62355a28b41bfc844b5b483bcc043ddb,
+        type: 3}
+      propertyPath: Chest
+      value: 
+      objectReference: {fileID: 1242004478}
     - target: {fileID: 8906199493344483774, guid: 62355a28b41bfc844b5b483bcc043ddb,
         type: 3}
       propertyPath: m_Name
@@ -5322,6 +5327,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df497991c3232a4189551caaab8b8a7, type: 3}
+--- !u!114 &1242004478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1242004479, guid: 2df497991c3232a4189551caaab8b8a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242004477}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0d266d259b64c4fae2774526ab12f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &1287572565
 Light:
   m_ObjectHideFlags: 0
@@ -10207,6 +10224,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutoRecipesBook
       objectReference: {fileID: 0}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiPages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiPages.Array.data[0]
+      value: 
+      objectReference: {fileID: 2043917158931619663, guid: 8b3d79358451e2742bfe248f1b7b2ba1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e669b8e444fef1d49b74687ccb3a0cda, type: 3}
 --- !u!114 &2057987203 stripped

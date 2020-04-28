@@ -26,17 +26,14 @@ public class GameManager : MonoBehaviour
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
-        foreach (var key in ingredients.Keys)
-            Debug.Log(key + " -> " + ingredients[key]);
-
         foreach (var recipe in Recipes)
         {
             if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
             {
                 GameRecipes[recipe.Name].First += 1;
 
-                //if (Book != null)
-                //    Book.RecipeDone(recipe.Name);
+                if (Book != null)
+                    Book.RecipeDone(recipe.Name);
 
                 CheckIfAllRecipesAreDone();
                 return true;

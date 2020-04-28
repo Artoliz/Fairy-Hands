@@ -25,8 +25,6 @@ public class ProgressBarCustom : MonoBehaviour
         Modifier parent = GetComponentInParent<Modifier>();
 
         float currentSizeX = _maxSizeX / parent.MaxHitTotal;
-        Debug.Log("scaleX: " + _size.x);
-        Debug.Log("sizeX: " + currentSizeX);
         Progress.localScale = new Vector3(_size.x - currentSizeX, _size.y, _size.z);
         _size = Progress.localScale;
     }

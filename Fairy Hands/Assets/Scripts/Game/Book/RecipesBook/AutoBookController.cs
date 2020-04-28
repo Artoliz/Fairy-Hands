@@ -59,7 +59,7 @@ public class AutoBookController : MonoBehaviour
 
     public void RecipeDone(RecipeName name)
     {
-        _gameRecipes[name].First++;
+        //_gameRecipes[name].First++;
     }
 
     public int GetToDoRecipe(string name)
