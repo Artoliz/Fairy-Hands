@@ -4,11 +4,11 @@ using System.Collections.Generic;
 public enum RecipeName
 {
     Polynectare = 0,
-    Heal,
-    Levitation,
-    Fear,
-    Nyctalope,
-    BreathingUnderwater
+    Heal = 1,
+    Levitation = 2,
+    Fear = 3,
+    Nyctalope = 4,
+    BreathingUnderwater = 5
 };
 
 struct Recipe

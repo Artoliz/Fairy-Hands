@@ -80,7 +80,6 @@ public class AutoBookController : MonoBehaviour
         foreach (var recipe in _gameRecipes)
         {
             string recipeName = recipe.Key.ToString();
-            Debug.Log(recipeName + " " + name);
             if (name.Contains(recipeName))
             {
                 return recipe.Value.Second;

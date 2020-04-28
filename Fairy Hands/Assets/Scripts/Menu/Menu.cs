@@ -31,6 +31,7 @@ public class Menu : MonoBehaviour
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
                 GameManager.Instance.StartGame();
+                break;
             }
         }
     }
@@ -42,6 +43,7 @@ public class Menu : MonoBehaviour
             if (hand != null)
             {
                 Application.Quit();
+                break;
             }
         }
     }
@@ -55,6 +57,7 @@ public class Menu : MonoBehaviour
                 startMenu.SetActive(true);
                 gameMenu.SetActive(false);
                 GameManager.Instance.StopGame();
+                break;
             }
         }
     }
@@ -66,6 +69,7 @@ public class Menu : MonoBehaviour
             if (hand != null)
             {
                 GameManager.Instance.RestartGame();
+                break;
             }
         }
     }

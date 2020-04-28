@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,9 +42,7 @@ public class GameManager : MonoBehaviour
         Recipe recipe = new Recipe();
 
         // Polynectare
-        ingredients.Add(Ingredient.Type.Slime, 2);
-        ingredients.Add(Ingredient.Type.Lemon, 1);
-        ingredients.Add(Ingredient.Type.Blood, 1);
+        ingredients.Add(Ingredient.Type.Water, 2);
         recipe.Name = RecipeName.Polynectare;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -51,9 +50,7 @@ public class GameManager : MonoBehaviour
 
         // Heal
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Blood, 3);
-        ingredients.Add(Ingredient.Type.Water, 2);
-        ingredients.Add(Ingredient.Type.Watermelon, 1);
+        ingredients.Add(Ingredient.Type.Water, 3);
         recipe.Name = RecipeName.Heal;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -61,9 +58,7 @@ public class GameManager : MonoBehaviour
 
         // Levitation
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Feather, 4);
-        ingredients.Add(Ingredient.Type.Bat, 2);
-        ingredients.Add(Ingredient.Type.Water, 2);
+        ingredients.Add(Ingredient.Type.Water, 4);
         recipe.Name = RecipeName.Levitation;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -79,9 +74,7 @@ public class GameManager : MonoBehaviour
 
         // BreathingUnderwater
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Fish, 2);
-        ingredients.Add(Ingredient.Type.Water, 2);
-        ingredients.Add(Ingredient.Type.Frog, 2);
+        ingredients.Add(Ingredient.Type.Water, 9);
         recipe.Name = RecipeName.BreathingUnderwater;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -89,9 +82,7 @@ public class GameManager : MonoBehaviour
 
         // Nyctalope
         recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Eye, 4);
-        ingredients.Add(Ingredient.Type.Bat, 2);
-        ingredients.Add(Ingredient.Type.Blood, 1);
+        ingredients.Add(Ingredient.Type.Water, 1000);
         recipe.Name = RecipeName.Nyctalope;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
@@ -101,19 +92,18 @@ public class GameManager : MonoBehaviour
     private void InitGameRecipes()
     {
         int nbRecipe = UnityEngine.Random.Range(4, 6);
+        Array names = Enum.GetValues(typeof(RecipeName));
 
-        for (int i = 0; i < nbRecipe; i++)
+        while (GameRecipes.Count < nbRecipe)
         {
-            int indexRecipe = UnityEngine.Random.Range(0, 5);
-            if (GameRecipes.ContainsKey((RecipeName)indexRecipe))
-                i -= 1;
-            else
+            int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
+            if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
                 GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
         }
 
         if (Storage != null)
         {
-            List<Ingredient.Type> types = new List<Ingredient.Type>();
+            List<Ingredient.Type> used = new List<Ingredient.Type>();
 
             foreach (Recipe recipe in Recipes)
             {
@@ -121,12 +111,12 @@ public class GameManager : MonoBehaviour
                 {
                     foreach (Ingredient.Type ing in recipe.Ingredients.Keys)
                     {
-                        if (!types.Contains(ing))
-                            types.Add(ing);
+                        if (!used.Contains(ing))
+                            used.Add(ing);
                     }
                 }
             }
-            Storage.GenerateIngredientsGetter(types);
+            Storage.GenerateIngredientsGetter(used);
         }
 
         if (Book != null)
@@ -179,7 +169,14 @@ public class GameManager : MonoBehaviour
     {
         Book.CloseBook();
         GameRecipes.Clear();
+        Storage.StopGame();
         PlayerPoints = 0;
+        StartCoroutine(Init());
+    }
+
+    IEnumerator Init()
+    {
+        yield return new WaitForSeconds(0.1f);
         InitGameRecipes();
         // Reset Timer
     }
@@ -187,6 +184,7 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         GameRecipes.Clear();
+        Storage.StopGame();
         Book.CloseBook();
         PlayerPoints = 0;
         // Stop Timer

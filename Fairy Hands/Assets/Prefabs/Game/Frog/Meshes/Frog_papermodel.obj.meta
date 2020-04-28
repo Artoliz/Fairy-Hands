@@ -11,6 +11,8 @@ ModelImporter:
     400004: Ground_Plane
     2100000: Frog_papermodel
     2100002: 07___Default
+    2100004: Frog_papermodelMat
+    2100006: Ground_PlaneMat
     2300000: Frog_papermodel
     2300002: Ground_Plane
     3300000: Frog_papermodel
