@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fe43e3a5b522841b0d3e6c21c358c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UiPages: []
+  UiPages:
+  - {fileID: 8010669036043822725, guid: 3f322eaa2554f0348bd3ff082a020f72, type: 3}
+  - {fileID: 2043917158931619663, guid: 8b3d79358451e2742bfe248f1b7b2ba1, type: 3}
   bookController: {fileID: 4747929967133155272}
   pageBackground: []
 --- !u!1001 &4747929967139511646
@@ -108,15 +110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418346, guid: 3c50f5acd38dd644eaab6c5535ee9f27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 418346, guid: 3c50f5acd38dd644eaab6c5535ee9f27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 418346, guid: 3c50f5acd38dd644eaab6c5535ee9f27, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 418346, guid: 3c50f5acd38dd644eaab6c5535ee9f27, type: 3}
       propertyPath: m_LocalRotation.x

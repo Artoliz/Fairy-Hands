@@ -26,7 +26,8 @@ public class Ingredient : MonoBehaviour
         Fish,
         Frog,
         Spider,
-        Tooth
+        Tooth,
+        Golem
     }
 
     public State _state = State.None;

@@ -19,9 +19,10 @@ GameObject:
   - component: {fileID: 8579921238288106069}
   - component: {fileID: 1946581982}
   - component: {fileID: 1946581981}
+  - component: {fileID: 4718933872392839777}
   m_Layer: 0
   m_Name: MeatHammer
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,3 +290,16 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &4718933872392839777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638825764980900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e72e8d48986e1844baf4e2d19ba0ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Magnitude: 2
