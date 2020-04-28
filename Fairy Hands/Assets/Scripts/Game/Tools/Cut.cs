@@ -5,12 +5,14 @@ using Valve.VR.InteractionSystem;
 
 public class Cut : MonoBehaviour
 {
+    public float Magnitude = 2.0f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ingredient"))
         {
             var velocityEstimator = GetComponentInParent<VelocityEstimator>();
-            if (velocityEstimator && velocityEstimator.GetVelocityEstimate().magnitude > 2.0f)
+            if (velocityEstimator && velocityEstimator.GetVelocityEstimate().magnitude > Magnitude)
             {
                 var modifier = other.gameObject.GetComponent<Modifier>();
                 if (modifier)
