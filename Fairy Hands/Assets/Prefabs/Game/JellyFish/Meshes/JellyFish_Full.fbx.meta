@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 9ea668a6b91188d41a3a29c75e0bbee4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Back_Tentacle
+    100002: Bubble_A
+    100004: Bubble_B
+    100006: Bubble_C
+    100008: Bubble_D
+    100010: Bubble_F
+    100012: Bubble_G
+    100014: Bubbles
+    100016: Cables
+    100018: extrudedSurface2
+    100020: extrudedSurface3
+    100022: extrudedSurface4
+    100024: extrudedSurface5
+    100026: extrudedSurface6
+    100028: extrudedSurface7
+    100030: extrudedSurface8
+    100032: extrudedSurface9
+    100034: Jelly_Fish_Body
+    100036: //RootNode
+    100038: Left_Arm
+    100040: Left_Arm1
+    100042: Left_Tentacle_geo
+    100044: Main_Tentacle_Geo
+    100046: Right_Question_Curve
+    100048: Spikes_Geo
+    400000: Back_Tentacle
+    400002: Bubble_A
+    400004: Bubble_B
+    400006: Bubble_C
+    400008: Bubble_D
+    400010: Bubble_F
+    400012: Bubble_G
+    400014: Bubbles
+    400016: Cables
+    400018: extrudedSurface2
+    400020: extrudedSurface3
+    400022: extrudedSurface4
+    400024: extrudedSurface5
+    400026: extrudedSurface6
+    400028: extrudedSurface7
+    400030: extrudedSurface8
+    400032: extrudedSurface9
+    400034: Jelly_Fish_Body
+    400036: //RootNode
+    400038: Left_Arm
+    400040: Left_Arm1
+    400042: Left_Tentacle_geo
+    400044: Main_Tentacle_Geo
+    400046: Right_Question_Curve
+    400048: Spikes_Geo
+    2100000: Jelly_Body_Shader
+    2100002: Tentacles_Shader
+    2300000: Back_Tentacle
+    2300002: Bubble_A
+    2300004: Bubble_B
+    2300006: Bubble_C
+    2300008: Bubble_D
+    2300010: Bubble_F
+    2300012: Bubble_G
+    2300014: extrudedSurface2
+    2300016: extrudedSurface3
+    2300018: extrudedSurface4
+    2300020: extrudedSurface5
+    2300022: extrudedSurface6
+    2300024: extrudedSurface7
+    2300026: extrudedSurface8
+    2300028: extrudedSurface9
+    2300030: Jelly_Fish_Body
+    2300032: Left_Arm
+    2300034: Left_Arm1
+    2300036: Left_Tentacle_geo
+    2300038: Main_Tentacle_Geo
+    2300040: Right_Question_Curve
+    3300000: Back_Tentacle
+    3300002: Bubble_A
+    3300004: Bubble_B
+    3300006: Bubble_C
+    3300008: Bubble_D
+    3300010: Bubble_F
+    3300012: Bubble_G
+    3300014: extrudedSurface2
+    3300016: extrudedSurface3
+    3300018: extrudedSurface4
+    3300020: extrudedSurface5
+    3300022: extrudedSurface6
+    3300024: extrudedSurface7
+    3300026: extrudedSurface8
+    3300028: extrudedSurface9
+    3300030: Jelly_Fish_Body
+    3300032: Left_Arm
+    3300034: Left_Arm1
+    3300036: Left_Tentacle_geo
+    3300038: Main_Tentacle_Geo
+    3300040: Right_Question_Curve
+    4300000: Jelly_Fish_Body
+    4300002: Main_Tentacle_Geo
+    4300004: Back_Tentacle
+    4300006: Left_Tentacle_geo
+    4300008: Left_Arm
+    4300010: Left_Arm1
+    4300012: Right_Question_Curve
+    4300014: extrudedSurface5
+    4300016: extrudedSurface3
+    4300018: extrudedSurface7
+    4300020: extrudedSurface2
+    4300022: extrudedSurface4
+    4300024: extrudedSurface9
+    4300026: extrudedSurface8
+    4300028: extrudedSurface6
+    4300030: Bubble_A
+    4300032: Bubble_B
+    4300034: Bubble_C
+    4300036: Bubble_D
+    4300038: Bubble_F
+    4300040: Bubble_G
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
