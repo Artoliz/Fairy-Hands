@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 77d5d3245290d1d4e97a75f85734c7e1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BezierCurve
+    100002: BezierCurve.001
+    100004: BezierCurve.002
+    100006: BezierCurve.003
+    100008: BezierCurve.004
+    100010: Cube
+    100012: Cube.001
+    100014: Cube.002
+    100016: Cube.003
+    100018: Cube.004
+    100020: Cylinder
+    100022: Cylinder.001
+    100024: Cylinder.002
+    100026: Cylinder.003
+    100028: Cylinder.004
+    100030: Cylinder.005
+    100032: //RootNode
+    100034: Plane
+    100036: Plane.001
+    100038: Plane.002
+    400000: BezierCurve
+    400002: BezierCurve.001
+    400004: BezierCurve.002
+    400006: BezierCurve.003
+    400008: BezierCurve.004
+    400010: Cube
+    400012: Cube.001
+    400014: Cube.002
+    400016: Cube.003
+    400018: Cube.004
+    400020: Cylinder
+    400022: Cylinder.001
+    400024: Cylinder.002
+    400026: Cylinder.003
+    400028: Cylinder.004
+    400030: Cylinder.005
+    400032: //RootNode
+    400034: Plane
+    400036: Plane.001
+    400038: Plane.002
+    2100000: mushrooms
+    2100002: stump
+    2300000: BezierCurve
+    2300002: BezierCurve.001
+    2300004: BezierCurve.002
+    2300006: BezierCurve.003
+    2300008: BezierCurve.004
+    2300010: Cube
+    2300012: Cube.001
+    2300014: Cube.002
+    2300016: Cube.003
+    2300018: Cube.004
+    2300020: Cylinder
+    2300022: Cylinder.001
+    2300024: Cylinder.002
+    2300026: Cylinder.003
+    2300028: Cylinder.004
+    2300030: Cylinder.005
+    2300032: Plane
+    2300034: Plane.001
+    2300036: Plane.002
+    3300000: BezierCurve
+    3300002: BezierCurve.001
+    3300004: BezierCurve.002
+    3300006: BezierCurve.003
+    3300008: BezierCurve.004
+    3300010: Cube
+    3300012: Cube.001
+    3300014: Cube.002
+    3300016: Cube.003
+    3300018: Cube.004
+    3300020: Cylinder
+    3300022: Cylinder.001
+    3300024: Cylinder.002
+    3300026: Cylinder.003
+    3300028: Cylinder.004
+    3300030: Cylinder.005
+    3300032: Plane
+    3300034: Plane.001
+    3300036: Plane.002
+    4300000: Cube
+    4300002: Cube.001
+    4300004: Cube.002
+    4300006: Cube.003
+    4300008: Cube.004
+    4300010: Plane
+    4300012: Plane.001
+    4300014: Plane.002
+    4300016: BezierCurve
+    4300018: Cylinder.002
+    4300020: BezierCurve.001
+    4300022: Cylinder
+    4300024: BezierCurve.002
+    4300026: Cylinder.001
+    4300028: BezierCurve.003
+    4300030: Cylinder.003
+    4300032: BezierCurve.004
+    4300034: Cylinder.004
+    4300036: Cylinder.005
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
