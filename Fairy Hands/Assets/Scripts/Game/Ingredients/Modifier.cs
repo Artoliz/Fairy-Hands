@@ -16,7 +16,8 @@ public class Modifier : MonoBehaviour
     public void ApplyModification()
     {
         CurrentHit += 1;
-        GetComponentInChildren<ProgressBarCustom>().OnHitChanged();
+        if (GetComponentInChildren<ProgressBarCustom>())
+            GetComponentInChildren<ProgressBarCustom>().OnHitChanged();
         if (CurrentHit == MaxHit)
         {
             GameObject tmp = Instantiate(NextModifier, this.transform.position, Quaternion.identity);
