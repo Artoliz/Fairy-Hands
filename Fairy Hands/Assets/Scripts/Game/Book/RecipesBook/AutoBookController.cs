@@ -17,7 +17,6 @@ public class AutoBookController : MonoBehaviour
 
     public void CreateBook(Dictionary<RecipeName, Pair<int, int>> gameRecipes)
     {
-
         _gameRecipes = gameRecipes;
         
         bookController.Reset();
@@ -55,6 +54,7 @@ public class AutoBookController : MonoBehaviour
                 }
             }
         }
+        bookController.OpenBook();
     }
 
     public void RecipeDone(RecipeName name)
@@ -101,8 +101,12 @@ public class AutoBookController : MonoBehaviour
         }
         return -1;
     }
-    
 
+    public void CloseBook()
+    {
+        bookController.CloseBook();
+    }
+    
 // Control book with Left / Right arrows
     void Update()
     {
@@ -120,28 +124,6 @@ public class AutoBookController : MonoBehaviour
                 bookController.CloseBook();
             else if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.CLOSED)
                 bookController.OpenBook();
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (bookController.getBookState() == AnimatedBookController.BOOK_STATE.OPENED)
-                bookController.CloseBook();
-            bookController.OpenBook();
-        }
-    }
-
-    public void switchPageStyle()
-    {
-        pageStyleIndex++;
-        if (pageStyleIndex >= pageBackground.Length)
-        {
-            pageStyleIndex = 0;
-        }
-
-        bookController.defaultBackground = pageBackground[pageStyleIndex];
-        foreach (AnimatedBookController.PageObjects page in bookController.getPageObjects())
-        {
-            page.RectoImage.sprite = pageBackground[pageStyleIndex];
-            page.VersoImage.sprite = pageBackground[pageStyleIndex];
         }
     }
 }
