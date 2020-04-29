@@ -111,6 +111,9 @@
               <e p="ProgressBarCustom.cs" t="Include" />
               <e p="Storage.cs" t="Include" />
             </e>
+            <e p="LittleClown" t="Include">
+              <e p="Animate.cs" t="Include" />
+            </e>
             <e p="Pair.cs" t="Include" />
             <e p="Recipe.cs" t="Include" />
             <e p="Tools" t="Include">

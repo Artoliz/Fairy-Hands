@@ -239,7 +239,7 @@ public class AnimatedBookController : MonoBehaviour
             int toDo = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
             bookPages[i].UiVerso.GetComponentInChildren<AutoBookRecipeCounter>().SetToDo(toDo);
 
-            bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>().ActivateRightButton();
+            bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>().ActivateLeftButton();
 
         }
     }

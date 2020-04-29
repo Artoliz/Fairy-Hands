@@ -2866,7 +2866,6 @@ GameObject:
   - component: {fileID: 2006712818}
   - component: {fileID: 2006712817}
   - component: {fileID: 2006712816}
-  - component: {fileID: 2822358259757326478}
   - component: {fileID: 7332331012407918729}
   m_Layer: 0
   m_Name: Eye_Mushroom_Full
@@ -2945,7 +2944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -3140,19 +3139,6 @@ MonoBehaviour:
   MaxHit: 1
   MaxHitTotal: 3
   CurrentHit: 0
---- !u!65 &2822358259757326478
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514336308024884085}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6702235, y: 7.427755, z: 1.8712932}
-  m_Center: {x: 0.067022815, y: 3.079833, z: -1.7760973}
 --- !u!65 &7332331012407918729
 BoxCollider:
   m_ObjectHideFlags: 0

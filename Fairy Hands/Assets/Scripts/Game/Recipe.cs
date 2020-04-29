@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 public enum RecipeName
 {
-    Health,
     Love,
-    WerewolfMorphos,
-    Mobility,
-    Strength,
     NightVision,
+    Health,
     Fear,
     Explosion,
+    Mobility,
+    WerewolfMorphos,
+    Strength,
     Invisibility,
     UnderwaterBreathing,
     Shield,

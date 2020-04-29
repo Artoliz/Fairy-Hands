@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 8722392279134374060}
   - component: {fileID: 8873197747426432480}
   - component: {fileID: 6761600448928642294}
-  - component: {fileID: 1964289773421655843}
   m_Layer: 0
   m_Name: Rose
   m_TagString: Ingredient
@@ -100,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -291,16 +290,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.935179, y: 0.4848486, z: 0.99335396}
   m_Center: {x: -0.0218755, y: 0.58648384, z: 0.0030989945}
---- !u!65 &1964289773421655843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4497689494449740880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.10534054, y: 0.30044037, z: 0.99335396}
-  m_Center: {x: 0.0025315653, y: 0.17970017, z: 0.0030989945}

@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
         // Health
         recipe.Name = RecipeName.Health;
+        recipe.Points = 11;
         ingredients.Add(Ingredient.Type.Blood, 2);
         ingredients.Add(Ingredient.Type.Cherry, 2);
         ingredients.Add(Ingredient.Type.Butterfly, 1);
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 
         // Love
         recipe.Name = RecipeName.Love;
+        recipe.Points = 14;
         ingredients.Add(Ingredient.Type.Heart, 2);
         ingredients.Add(Ingredient.Type.Apple, 2);
         ingredients.Add(Ingredient.Type.Rose, 2);
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         // WerewolfMorphos
         recipe.Name = RecipeName.WerewolfMorphos;
+        recipe.Points = 17;
         ingredients.Add(Ingredient.Type.WolfPaw, 4);
         ingredients.Add(Ingredient.Type.Heart, 1);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         // Mobility
         recipe.Name = RecipeName.Mobility;
+        recipe.Points = 18;
         ingredients.Add(Ingredient.Type.WolfPaw, 4);
         ingredients.Add(Ingredient.Type.Lemon, 2);
         ingredients.Add(Ingredient.Type.Feather, 1);
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
 
         // Strength
         recipe.Name = RecipeName.Strength;
+        recipe.Points = 19;
         ingredients.Add(Ingredient.Type.Watermelon, 1);
         ingredients.Add(Ingredient.Type.Golem, 1);
         ingredients.Add(Ingredient.Type.Water, 2);
@@ -92,6 +97,7 @@ public class GameManager : MonoBehaviour
 
         // NightVision
         recipe.Name = RecipeName.NightVision;
+        recipe.Points = 21;
         ingredients.Add(Ingredient.Type.Eye, 2);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
         ingredients.Add(Ingredient.Type.Bat, 2);
@@ -103,6 +109,7 @@ public class GameManager : MonoBehaviour
 
         // Explosion
         recipe.Name = RecipeName.Explosion;
+        recipe.Points = 22;
         ingredients.Add(Ingredient.Type.Chili, 3);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
         ingredients.Add(Ingredient.Type.Water, 1);
@@ -112,6 +119,7 @@ public class GameManager : MonoBehaviour
 
         // Health
         recipe.Name = RecipeName.Health;
+        recipe.Points = 24;
         ingredients.Add(Ingredient.Type.Blood, 2);
         ingredients.Add(Ingredient.Type.Cherry, 2);
         ingredients.Add(Ingredient.Type.Butterfly, 1);
@@ -121,6 +129,7 @@ public class GameManager : MonoBehaviour
 
         // Invisibility
         recipe.Name = RecipeName.Invisibility;
+        recipe.Points = 24;
         ingredients.Add(Ingredient.Type.JellyFish, 3);
         ingredients.Add(Ingredient.Type.Lemon, 1);
         ingredients.Add(Ingredient.Type.Slime, 3);
@@ -131,6 +140,7 @@ public class GameManager : MonoBehaviour
 
         // UnderwaterBreathing
         recipe.Name = RecipeName.UnderwaterBreathing;
+        recipe.Points = 24;
         ingredients.Add(Ingredient.Type.Fish, 2);
         ingredients.Add(Ingredient.Type.JellyFish, 2);
         ingredients.Add(Ingredient.Type.Water, 2);
@@ -140,6 +150,7 @@ public class GameManager : MonoBehaviour
 
         // Shield
         recipe.Name = RecipeName.Shield;
+        recipe.Points = 25;
         ingredients.Add(Ingredient.Type.Golem, 2);
         ingredients.Add(Ingredient.Type.Lemon, 1);
         ingredients.Add(Ingredient.Type.Water, 1);
@@ -149,6 +160,7 @@ public class GameManager : MonoBehaviour
 
         // Revive
         recipe.Name = RecipeName.Revive;
+        recipe.Points = 28;
         ingredients.Add(Ingredient.Type.Heart, 1);
         ingredients.Add(Ingredient.Type.Blood, 3);
         ingredients.Add(Ingredient.Type.Cherry, 2);
@@ -165,11 +177,13 @@ public class GameManager : MonoBehaviour
         int nbRecipes = UnityEngine.Random.Range(4, 6);
         Array names = Enum.GetValues(typeof(RecipeName));
 
+        int i = 0;
         while (GameRecipes.Count < nbRecipes)
         {
-            int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
-            if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
-                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+            //int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
+            //if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
+                GameRecipes.Add((RecipeName)i, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+            i += 1;
         }
 
         if (Storage != null)
@@ -212,6 +226,15 @@ public class GameManager : MonoBehaviour
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
+        if (ingredients.Count == 0)
+        {
+            Debug.Log("NoIngredient");
+            return false;
+        }
+
+        foreach (var i in ingredients)
+            Debug.Log("Given: " + i.ToString());
+
         foreach (var recipe in Recipes)
         {
             if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
