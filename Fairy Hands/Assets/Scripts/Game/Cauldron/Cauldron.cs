@@ -9,7 +9,10 @@ public class Cauldron : MonoBehaviour
     public Dictionary<Ingredient.Type, int> Ingredients = new Dictionary<Ingredient.Type, int>();
 
     public Material[] PotionVisuals = null;
-    
+
+    [SerializeField] private ParticleSystem BadPotion = null;
+    [SerializeField] private ParticleSystem GoodPotion = null;
+
     public void AddIngredient(Ingredient.Type ingredient)
     {
         if (ingredient == Ingredient.Type.None)
@@ -39,6 +42,8 @@ public class Cauldron : MonoBehaviour
                 {
                     child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
 
+                    GoodPotion.Play();
+
                     Chest.SetPotion(emptyPotion);
 
                     break;
@@ -46,7 +51,13 @@ public class Cauldron : MonoBehaviour
             }
         } else
         {
-            Debug.Log("Recette foirée... Jouer l'animation!");
+            BadPotion.Play();
+            foreach (Hand hand in Player.instance.hands)
+            {
+                if (hand.currentAttachedObject.name == emptyPotion.name)
+                    hand.DetachObject(hand.currentAttachedObject);
+            }
+            Destroy(emptyPotion);
         }
         EmptyCauldron();
     }
