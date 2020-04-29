@@ -138,38 +138,38 @@ public class GameManager : MonoBehaviour
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // UnderwaterBreathing
-        recipe.Name = RecipeName.UnderwaterBreathing;
-        recipe.Points = 24;
-        ingredients.Add(Ingredient.Type.Fish, 2);
-        ingredients.Add(Ingredient.Type.JellyFish, 2);
-        ingredients.Add(Ingredient.Type.Water, 2);
-        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
-        Recipes.Add(recipe);
-        ingredients.Clear();
+        //// UnderwaterBreathing
+        //recipe.Name = RecipeName.UnderwaterBreathing;
+        //recipe.Points = 24;
+        //ingredients.Add(Ingredient.Type.Fish, 2);
+        //ingredients.Add(Ingredient.Type.JellyFish, 2);
+        //ingredients.Add(Ingredient.Type.Water, 2);
+        //recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        //Recipes.Add(recipe);
+        //ingredients.Clear();
 
-        // Shield
-        recipe.Name = RecipeName.Shield;
-        recipe.Points = 25;
-        ingredients.Add(Ingredient.Type.Golem, 2);
-        ingredients.Add(Ingredient.Type.Lemon, 1);
-        ingredients.Add(Ingredient.Type.Water, 1);
-        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
-        Recipes.Add(recipe);
-        ingredients.Clear();
+        //// Shield
+        //recipe.Name = RecipeName.Shield;
+        //recipe.Points = 25;
+        //ingredients.Add(Ingredient.Type.Golem, 2);
+        //ingredients.Add(Ingredient.Type.Lemon, 1);
+        //ingredients.Add(Ingredient.Type.Water, 1);
+        //recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        //Recipes.Add(recipe);
+        //ingredients.Clear();
 
-        // Revive
-        recipe.Name = RecipeName.Revive;
-        recipe.Points = 28;
-        ingredients.Add(Ingredient.Type.Heart, 1);
-        ingredients.Add(Ingredient.Type.Blood, 3);
-        ingredients.Add(Ingredient.Type.Cherry, 2);
-        ingredients.Add(Ingredient.Type.Butterfly, 2);
-        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
-        ingredients.Add(Ingredient.Type.Slime, 2);
-        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
-        Recipes.Add(recipe);
-        ingredients.Clear();
+        //// Revive
+        //recipe.Name = RecipeName.Revive;
+        //recipe.Points = 28;
+        //ingredients.Add(Ingredient.Type.Heart, 1);
+        //ingredients.Add(Ingredient.Type.Blood, 3);
+        //ingredients.Add(Ingredient.Type.Cherry, 2);
+        //ingredients.Add(Ingredient.Type.Butterfly, 2);
+        //ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        //ingredients.Add(Ingredient.Type.Slime, 2);
+        //recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        //Recipes.Add(recipe);
+        //ingredients.Clear();
     }
 
     private void InitGameRecipes()
