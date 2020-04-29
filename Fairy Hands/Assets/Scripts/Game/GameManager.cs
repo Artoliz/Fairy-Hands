@@ -41,49 +41,120 @@ public class GameManager : MonoBehaviour
         Dictionary<Ingredient.Type, int> ingredients = new Dictionary<Ingredient.Type, int>();
         Recipe recipe = new Recipe();
 
-        // Polynectare
-        ingredients.Add(Ingredient.Type.Water, 2);
-        recipe.Name = RecipeName.Polynectare;
+        // Health
+        recipe.Name = RecipeName.Health;
+        ingredients.Add(Ingredient.Type.Blood, 2);
+        ingredients.Add(Ingredient.Type.Cherry, 2);
+        ingredients.Add(Ingredient.Type.Butterfly, 1);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // Heal
-        recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Water, 3);
-        recipe.Name = RecipeName.Heal;
+        // Love
+        recipe.Name = RecipeName.Love;
+        ingredients.Add(Ingredient.Type.Heart, 2);
+        ingredients.Add(Ingredient.Type.Apple, 2);
+        ingredients.Add(Ingredient.Type.Rose, 2);
+        ingredients.Add(Ingredient.Type.Blood, 2);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // Levitation
-        recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Water, 4);
-        recipe.Name = RecipeName.Levitation;
+        // WerewolfMorphos
+        recipe.Name = RecipeName.WerewolfMorphos;
+        ingredients.Add(Ingredient.Type.WolfPaw, 4);
+        ingredients.Add(Ingredient.Type.Heart, 1);
+        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        ingredients.Add(Ingredient.Type.Blood, 2);
+        ingredients.Add(Ingredient.Type.Slime, 2);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // Fear
-        recipe = new Recipe();
+        // Mobility
+        recipe.Name = RecipeName.Mobility;
+        ingredients.Add(Ingredient.Type.WolfPaw, 4);
+        ingredients.Add(Ingredient.Type.Lemon, 2);
+        ingredients.Add(Ingredient.Type.Feather, 1);
         ingredients.Add(Ingredient.Type.Water, 1);
-        recipe.Name = RecipeName.Fear;
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // BreathingUnderwater
-        recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Water, 9);
-        recipe.Name = RecipeName.BreathingUnderwater;
+        // Strength
+        recipe.Name = RecipeName.Strength;
+        ingredients.Add(Ingredient.Type.Watermelon, 1);
+        ingredients.Add(Ingredient.Type.Golem, 1);
+        ingredients.Add(Ingredient.Type.Water, 2);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // Nyctalope
-        recipe = new Recipe();
-        ingredients.Add(Ingredient.Type.Water, 1000);
-        recipe.Name = RecipeName.Nyctalope;
+        // NightVision
+        recipe.Name = RecipeName.NightVision;
+        ingredients.Add(Ingredient.Type.Eye, 2);
+        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        ingredients.Add(Ingredient.Type.Bat, 2);
+        ingredients.Add(Ingredient.Type.WolfPaw, 4);
+        ingredients.Add(Ingredient.Type.Slime, 2);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // Explosion
+        recipe.Name = RecipeName.Explosion;
+        ingredients.Add(Ingredient.Type.Chili, 3);
+        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        ingredients.Add(Ingredient.Type.Water, 1);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // Health
+        recipe.Name = RecipeName.Health;
+        ingredients.Add(Ingredient.Type.Blood, 2);
+        ingredients.Add(Ingredient.Type.Cherry, 2);
+        ingredients.Add(Ingredient.Type.Butterfly, 1);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // Invisibility
+        recipe.Name = RecipeName.Invisibility;
+        ingredients.Add(Ingredient.Type.JellyFish, 3);
+        ingredients.Add(Ingredient.Type.Lemon, 1);
+        ingredients.Add(Ingredient.Type.Slime, 3);
+        ingredients.Add(Ingredient.Type.Water, 3);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // UnderwaterBreathing
+        recipe.Name = RecipeName.UnderwaterBreathing;
+        ingredients.Add(Ingredient.Type.Fish, 2);
+        ingredients.Add(Ingredient.Type.JellyFish, 2);
+        ingredients.Add(Ingredient.Type.Water, 2);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // Shield
+        recipe.Name = RecipeName.Shield;
+        ingredients.Add(Ingredient.Type.Golem, 2);
+        ingredients.Add(Ingredient.Type.Lemon, 1);
+        ingredients.Add(Ingredient.Type.Water, 1);
+        recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
+        Recipes.Add(recipe);
+        ingredients.Clear();
+
+        // Revive
+        recipe.Name = RecipeName.Revive;
+        ingredients.Add(Ingredient.Type.Heart, 1);
+        ingredients.Add(Ingredient.Type.Blood, 3);
+        ingredients.Add(Ingredient.Type.Cherry, 2);
+        ingredients.Add(Ingredient.Type.Butterfly, 2);
+        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        ingredients.Add(Ingredient.Type.Slime, 2);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();

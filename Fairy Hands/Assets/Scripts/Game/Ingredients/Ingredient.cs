@@ -34,7 +34,8 @@ public class Ingredient : MonoBehaviour
         EyeMushroom,
         Heart,
         JellyFish,
-        Rose
+        Rose,
+        WolfPaw
     }
 
     public State _state = State.None;

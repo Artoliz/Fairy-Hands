@@ -3,12 +3,18 @@ using System.Collections.Generic;
 
 public enum RecipeName
 {
-    Polynectare = 0,
-    Heal = 1,
-    Levitation = 2,
-    Fear = 3,
-    Nyctalope = 4,
-    BreathingUnderwater = 5
+    Health,
+    Love,
+    WerewolfMorphos,
+    Mobility,
+    Strength,
+    NightVision,
+    Fear,
+    Explosion,
+    Invisibility,
+    UnderwaterBreathing,
+    Shield,
+    Revive
 };
 
 struct Recipe
