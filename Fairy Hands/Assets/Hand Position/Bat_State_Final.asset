@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90911e410742a1498a167540c7865bf, type: 3}
-  m_Name: Bat
+  m_Name: Bat_State_Final
   m_EditorClassIdentifier: 
   leftHand:
     inputSource: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
     ignoreRootPoseData: 1
     ignoreWristPoseData: 1
     position: {x: 0, y: 0, z: 0}
-    rotation: {x: -0, y: -0, z: -0, w: 1}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
     bonePositions: []
     boneRotations: []
   applyToSkeletonRoot: 1

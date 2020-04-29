@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1222671035}
   - component: {fileID: 1222671034}
   - component: {fileID: 1222671033}
+  - component: {fileID: 4375059053045078728}
   - component: {fileID: 1283425185419644191}
   m_Layer: 0
   m_Name: Eye_Mushroom_State_Final
@@ -204,6 +205,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 18
+--- !u!114 &4375059053045078728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478784105378629303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - Eye_Mushroom_State_Final (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: 0107b8d1cf2774d45b60cf6c8849b8c1, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
 --- !u!65 &1283425185419644191
 BoxCollider:
   m_ObjectHideFlags: 0
