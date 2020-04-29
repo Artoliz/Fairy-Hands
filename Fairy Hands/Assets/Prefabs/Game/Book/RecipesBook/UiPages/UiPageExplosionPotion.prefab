@@ -2303,7 +2303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d708c6439e69a6641aae4aa24f85d08b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2556,7 +2556,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eye Mushroom
+  m_text: 'Cutted
+
+    Eye-Mushroom'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b9ae0dc7af284dd49adbce1ac8dcb7b2, type: 2}
   m_sharedMaterial: {fileID: 21240283202523128, guid: b9ae0dc7af284dd49adbce1ac8dcb7b2,
@@ -2626,12 +2628,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.0074982597, w: 0}
   m_textInfo:
     textComponent: {fileID: 4060723129587571303}
-    characterCount: 12
+    characterCount: 19
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
