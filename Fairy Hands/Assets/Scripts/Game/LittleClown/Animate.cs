@@ -13,10 +13,19 @@ public class Animate : MonoBehaviour
 
     private Vector3 _destination;
 
-    void Start()
+    private enum ToDestination
+    {
+        Start,
+        End
+    };
+
+    private ToDestination _destinationState;
+
+    void Awake()
     {
         _animation = GetComponent<Animation>();
         _destination = _EndPos.position;
+        _destinationState = ToDestination.End;
     }
 
     void Update()
@@ -29,10 +38,16 @@ public class Animate : MonoBehaviour
 
             if (Vector3.Distance(transform.position, _destination) < 0.001f)
             {
-                if (_destination == _EndPos.position)
+                if (_destinationState == ToDestination.End)
+                {
                     _destination = _StartPos.position;
-                else if (_destination == _StartPos.position)
+                    _destinationState = ToDestination.Start;
+                }
+                else
+                {
                     _destination = _EndPos.position;
+                    _destinationState = ToDestination.End;
+                }
                 _isWalking = false;
             }
         } else
@@ -45,7 +60,7 @@ public class Animate : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         _isWalking = true;
     }
 
