@@ -162,10 +162,10 @@ public class GameManager : MonoBehaviour
 
     private void InitGameRecipes()
     {
-        int nbRecipe = UnityEngine.Random.Range(4, 6);
+        int nbRecipes = UnityEngine.Random.Range(4, 6);
         Array names = Enum.GetValues(typeof(RecipeName));
 
-        while (GameRecipes.Count < nbRecipe)
+        while (GameRecipes.Count < nbRecipes)
         {
             int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
             if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
