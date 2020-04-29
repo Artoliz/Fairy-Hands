@@ -36,6 +36,20 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void PlayGameWithTutorial()
+    {
+        foreach (var hand in Player.instance.hands)
+        {
+            if (hand != null)
+            {
+                startMenu.SetActive(false);
+                gameMenu.SetActive(true);
+                GameManager.Instance.StartGame();
+                break;
+            }
+        }
+    }
+
     public void QuitToDesktop()
     {
         foreach (var hand in Player.instance.hands)
