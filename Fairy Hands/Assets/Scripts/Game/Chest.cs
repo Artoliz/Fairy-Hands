@@ -34,14 +34,6 @@ public class Chest : MonoBehaviour
 
     public void SetPotion(GameObject potion)
     {
-        foreach (Hand hand in Player.instance.hands)
-        {
-            if (hand.currentAttachedObject.name == potion.name)
-            {
-                hand.DetachObject(hand.currentAttachedObject);
-            }
-        }
-
         potion.transform.SetParent(transform);
         potion.transform.localPosition = _positions[_offset];
         _offset += 1;

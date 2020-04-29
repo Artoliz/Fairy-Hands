@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8130187503330356542}
   - component: {fileID: 6960215857841697}
   m_Layer: 0
-  m_Name: Chilli_Pepper_Full
+  m_Name: Chili_Pepper_Full
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0

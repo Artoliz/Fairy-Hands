@@ -177,11 +177,13 @@ public class GameManager : MonoBehaviour
         int nbRecipes = UnityEngine.Random.Range(4, 6);
         Array names = Enum.GetValues(typeof(RecipeName));
 
+        int i = 0;
         while (GameRecipes.Count < nbRecipes)
         {
-            int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
-            if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
-                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+            //int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
+            //if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
+                GameRecipes.Add((RecipeName)i, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+            i += 1;
         }
 
         if (Storage != null)
@@ -224,6 +226,8 @@ public class GameManager : MonoBehaviour
 
     public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
+        if (ingredients.Count == 0)
+            return false;
         foreach (var recipe in Recipes)
         {
             if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)

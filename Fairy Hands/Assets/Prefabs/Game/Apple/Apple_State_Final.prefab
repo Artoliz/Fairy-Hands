@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5509044408813376703}
   - component: {fileID: 114097453510357488}
   m_Layer: 0
-  m_Name: Apple_Quarter
+  m_Name: Apple_State_Final
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0

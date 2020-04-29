@@ -42,7 +42,13 @@ public class Cauldron : MonoBehaviour
                 {
                     child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
 
-                    GoodPotion.Play();
+                    if (GoodPotion != null)
+                    {
+                        GoodPotion.gameObject.SetActive(true);
+                        GoodPotion.Play();
+                    }
+                    else
+                        Debug.Log("Couldn't play animation good");
 
                     Chest.SetPotion(emptyPotion);
 
@@ -51,13 +57,12 @@ public class Cauldron : MonoBehaviour
             }
         } else
         {
-            BadPotion.Play();
-            foreach (Hand hand in Player.instance.hands)
-            {
-                if (hand.currentAttachedObject.name == emptyPotion.name)
-                    hand.DetachObject(hand.currentAttachedObject);
-            }
-            Destroy(emptyPotion);
+            if (BadPotion != null) {
+                Debug.Log("Play BadPotion");
+                BadPotion.gameObject.SetActive(true);
+                BadPotion.Play();
+            } else
+                Debug.Log("Couldn't play animation bad");
         }
         EmptyCauldron();
     }
