@@ -59,26 +59,26 @@ public class Storage : MonoBehaviour
             }
         }
 
-        Array ings = Enum.GetValues(typeof(Ingredient.Type));
-        foreach (var ing in ings)
-        {
-            if (instantiates.Contains((Ingredient.Type)ing))
-                continue;
-            foreach (GameObject getter in Getters)
-            {
-                if (getter.name.Contains(ing.ToString()))
-                {
-                    GameObject tmp = Instantiate(getter);
-                    tmp.transform.SetParent(transform);
-                    tmp.transform.position = _positions[_ingredientsOffset];
-                    _ingredientsOffset += 1;
-                    _ingredientsObj.Add(tmp);
-                    if (_ingredientsOffset >= _positions.Count)
-                        return;
-                    break;
-                }
-            }
-        }
+        //Array ings = Enum.GetValues(typeof(Ingredient.Type));
+        //foreach (var ing in ings)
+        //{
+        //    if (instantiates.Contains((Ingredient.Type)ing))
+        //        continue;
+        //    foreach (GameObject getter in Getters)
+        //    {
+        //        if (getter.name.Contains(ing.ToString()))
+        //        {
+        //            GameObject tmp = Instantiate(getter);
+        //            tmp.transform.SetParent(transform);
+        //            tmp.transform.position = _positions[_ingredientsOffset];
+        //            _ingredientsOffset += 1;
+        //            _ingredientsObj.Add(tmp);
+        //            if (_ingredientsOffset >= _positions.Count)
+        //                return;
+        //            break;
+        //        }
+        //    }
+        //}
     }
 
     public void StopGame()
