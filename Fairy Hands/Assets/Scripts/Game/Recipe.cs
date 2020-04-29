@@ -12,9 +12,9 @@ public enum RecipeName
     WerewolfMorphos,
     Strength,
     Invisibility,
-    //UnderwaterBreathing,
-    //Shield,
-    //Revive
+    UnderwaterBreathing,
+    Shield,
+    Revive
 };
 
 struct Recipe

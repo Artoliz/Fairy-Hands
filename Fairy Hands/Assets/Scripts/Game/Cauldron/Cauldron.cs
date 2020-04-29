@@ -57,8 +57,8 @@ public class Cauldron : MonoBehaviour
             }
         } else
         {
-            if (BadPotion != null) {
-                Debug.Log("Play BadPotion");
+            if (BadPotion != null)
+            {
                 BadPotion.gameObject.SetActive(true);
                 BadPotion.Play();
             } else
