@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 2793896565102125030}
   - component: {fileID: 8742194335472048010}
   m_Layer: 0
-  m_Name: Watermelon_Quarter
-  m_TagString: Untagged
+  m_Name: Watermelon_State_2
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
-  _type: 4
+  _type: 0
 --- !u!114 &2793896565102125031
 MonoBehaviour:
   m_ObjectHideFlags: 0

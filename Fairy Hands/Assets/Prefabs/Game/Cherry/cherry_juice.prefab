@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1459675447173380089}
   - component: {fileID: 8631027182060165154}
   - component: {fileID: 8630279785903075154}
+  - component: {fileID: 1155482759}
   m_Layer: 0
   m_Name: cherry_juice
-  m_TagString: Potion
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8870429813583310085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.268, z: -0.3614}
-  m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 8867861435106098281}
   - {fileID: 8868088099222200047}
@@ -187,6 +188,20 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &1155482759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870429813583310085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00809001f3d6144ab2997b53eb99073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _type: 16
 --- !u!1 &8870520930556515317
 GameObject:
   m_ObjectHideFlags: 0

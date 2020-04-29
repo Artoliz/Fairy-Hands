@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 114560340529877904}
   - component: {fileID: 114474261104646654}
   - component: {fileID: 7356175774405371537}
+  - component: {fileID: 114773810868327082}
   m_Layer: 0
-  m_Name: Bat_Cutted
+  m_Name: Bat_State_Final
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,6 +217,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23107329, y: 0.03942454, z: 0.24785893}
   m_Center: {x: -0.037579104, y: 0.0053266883, z: 0.024761297}
+--- !u!114 &114773810868327082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012336146256195785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00809001f3d6144ab2997b53eb99073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _type: 2
 --- !u!1 &3012336146256195787
 GameObject:
   m_ObjectHideFlags: 0

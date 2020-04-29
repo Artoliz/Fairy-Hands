@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 260567554638431821}
   - component: {fileID: 114030083006907104}
   m_Layer: 0
-  m_Name: Spider
+  m_Name: Spider_Full
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   NextModifier: {fileID: 7912718327297828897, guid: 46dca3b076196374b8e582be897a0aa7,
     type: 3}
   MaxHit: 8
-  MaxHitTotal: 0
+  MaxHitTotal: 8
   CurrentHit: 0
 --- !u!65 &260567554638431821
 BoxCollider:

@@ -19,8 +19,9 @@ GameObject:
   - component: {fileID: 6118904044276524544}
   - component: {fileID: 6660245448589307023}
   - component: {fileID: 4006525818121277197}
+  - component: {fileID: 184550454}
   m_Layer: 0
-  m_Name: fish
+  m_Name: Fish_Full
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
-  _type: 10
+  _type: 0
 --- !u!114 &8227717927886522593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,3 +292,20 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &184550454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13746322118371801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ff206884b7ae24e95f7fedd4c1566e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextModifier: {fileID: 3353868378079228360, guid: 67700ea450297554bb3a5368fbfacc9d,
+    type: 3}
+  MaxHit: 1
+  MaxHitTotal: 6
+  CurrentHit: 0

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 1063821553475952654}
   - component: {fileID: 5521119447321496450}
   m_Layer: 0
-  m_Name: Lemon
-  m_TagString: Untagged
+  m_Name: Lemon_Full
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ff206884b7ae24e95f7fedd4c1566e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextModifier: {fileID: 2037517652551928117, guid: f5a4084a5533091489f838fbecdb6284,
+  NextModifier: {fileID: 8496688201345811606, guid: 366ff9cd157f3b0429cacf45a6e1bd73,
     type: 3}
-  MaxHit: 1
-  MaxHitTotal: 3
+  MaxHit: 5
+  MaxHitTotal: 5
   CurrentHit: 0

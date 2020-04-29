@@ -27,7 +27,14 @@ public class Ingredient : MonoBehaviour
         Frog,
         Spider,
         Tooth,
-        Golem
+        Golem,
+        Butterfly,
+        Cherry,
+        Chili,
+        EyeMushroom,
+        Heart,
+        JellyFish,
+        Rose
     }
 
     public State _state = State.None;
