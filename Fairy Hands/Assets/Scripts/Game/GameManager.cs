@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         // Health
         recipe.Name = RecipeName.Health;
         recipe.Points = 11;
+        recipe.FlaskName = "Pyramide";
         ingredients.Add(Ingredient.Type.Blood, 2);
         ingredients.Add(Ingredient.Type.Cherry, 2);
         ingredients.Add(Ingredient.Type.Butterfly, 1);
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
         // Love
         recipe.Name = RecipeName.Love;
         recipe.Points = 14;
+        recipe.FlaskName = "Sphere";
         ingredients.Add(Ingredient.Type.Heart, 2);
         ingredients.Add(Ingredient.Type.Apple, 2);
         ingredients.Add(Ingredient.Type.Rose, 2);
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
         // WerewolfMorphos
         recipe.Name = RecipeName.WerewolfMorphos;
         recipe.Points = 17;
+        recipe.FlaskName = "Line";
         ingredients.Add(Ingredient.Type.WolfPaw, 4);
         ingredients.Add(Ingredient.Type.Heart, 1);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
         // Mobility
         recipe.Name = RecipeName.Mobility;
         recipe.Points = 18;
+        recipe.FlaskName = "Triangle";
         ingredients.Add(Ingredient.Type.WolfPaw, 4);
         ingredients.Add(Ingredient.Type.Lemon, 2);
         ingredients.Add(Ingredient.Type.Feather, 1);
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour
         // Strength
         recipe.Name = RecipeName.Strength;
         recipe.Points = 19;
+        recipe.FlaskName = "Square";
         ingredients.Add(Ingredient.Type.Watermelon, 1);
         ingredients.Add(Ingredient.Type.Golem, 1);
         ingredients.Add(Ingredient.Type.Water, 2);
@@ -98,6 +103,7 @@ public class GameManager : MonoBehaviour
         // NightVision
         recipe.Name = RecipeName.NightVision;
         recipe.Points = 21;
+        recipe.FlaskName = "Triangle";
         ingredients.Add(Ingredient.Type.Eye, 2);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
         ingredients.Add(Ingredient.Type.Bat, 2);
@@ -110,6 +116,7 @@ public class GameManager : MonoBehaviour
         // Explosion
         recipe.Name = RecipeName.Explosion;
         recipe.Points = 22;
+        recipe.FlaskName = "Sphere";
         ingredients.Add(Ingredient.Type.Chili, 3);
         ingredients.Add(Ingredient.Type.EyeMushroom, 2);
         ingredients.Add(Ingredient.Type.Water, 1);
@@ -117,12 +124,14 @@ public class GameManager : MonoBehaviour
         Recipes.Add(recipe);
         ingredients.Clear();
 
-        // Health
-        recipe.Name = RecipeName.Health;
-        recipe.Points = 24;
-        ingredients.Add(Ingredient.Type.Blood, 2);
-        ingredients.Add(Ingredient.Type.Cherry, 2);
-        ingredients.Add(Ingredient.Type.Butterfly, 1);
+        // Fear
+        recipe.Name = RecipeName.Fear;
+        recipe.Points = 21;
+        recipe.FlaskName = "Line";
+        ingredients.Add(Ingredient.Type.Spider, 1);
+        ingredients.Add(Ingredient.Type.EyeMushroom, 2);
+        ingredients.Add(Ingredient.Type.Frog, 2);
+        ingredients.Add(Ingredient.Type.Slime, 2);
         recipe.Ingredients = new Dictionary<Ingredient.Type, int>(ingredients);
         Recipes.Add(recipe);
         ingredients.Clear();
@@ -130,6 +139,7 @@ public class GameManager : MonoBehaviour
         // Invisibility
         recipe.Name = RecipeName.Invisibility;
         recipe.Points = 24;
+        recipe.FlaskName = "Line";
         ingredients.Add(Ingredient.Type.JellyFish, 3);
         ingredients.Add(Ingredient.Type.Lemon, 1);
         ingredients.Add(Ingredient.Type.Slime, 3);
@@ -141,6 +151,7 @@ public class GameManager : MonoBehaviour
         // UnderwaterBreathing
         recipe.Name = RecipeName.UnderwaterBreathing;
         recipe.Points = 24;
+        recipe.FlaskName = "Triangle";
         ingredients.Add(Ingredient.Type.Fish, 2);
         ingredients.Add(Ingredient.Type.JellyFish, 2);
         ingredients.Add(Ingredient.Type.Water, 2);
@@ -151,6 +162,7 @@ public class GameManager : MonoBehaviour
         // Shield
         recipe.Name = RecipeName.Shield;
         recipe.Points = 25;
+        recipe.FlaskName = "Square";
         ingredients.Add(Ingredient.Type.Golem, 2);
         ingredients.Add(Ingredient.Type.Lemon, 1);
         ingredients.Add(Ingredient.Type.Water, 1);
@@ -161,6 +173,7 @@ public class GameManager : MonoBehaviour
         // Revive
         recipe.Name = RecipeName.Revive;
         recipe.Points = 28;
+        recipe.FlaskName = "Pyramide";
         ingredients.Add(Ingredient.Type.Heart, 1);
         ingredients.Add(Ingredient.Type.Blood, 3);
         ingredients.Add(Ingredient.Type.Cherry, 2);
@@ -224,16 +237,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
+    public bool IsFlaskMatch(GameObject emptyPotion)
+    {
+        string emptyName = emptyPotion.name;
+
+        return true;
+    }
+
+    public string IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
         if (ingredients.Count == 0)
-        {
-            Debug.Log("NoIngredient");
-            return false;
-        }
-
-        foreach (var i in ingredients)
-            Debug.Log("Given: " + i.ToString());
+            return null;
 
         foreach (var recipe in Recipes)
         {
@@ -246,10 +260,10 @@ public class GameManager : MonoBehaviour
                     Book.RecipeDone(recipe.Name);
 
                 CheckIfAllRecipesAreDone();
-                return true;
+                return recipe.FlaskName;
             }
         }
-        return false;
+        return null;
     }
 
     public void StartGame()

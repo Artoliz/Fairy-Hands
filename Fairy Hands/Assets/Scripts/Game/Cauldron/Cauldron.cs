@@ -34,35 +34,51 @@ public class Cauldron : MonoBehaviour
 
     public void CreateRecipe(GameObject emptyPotion)
     {
-        if (GameManager.Instance.IsRecipeExist(Ingredients))
+        string flaskName = GameManager.Instance.IsRecipeExist(Ingredients);
+        if (flaskName != null)
         {
+            if (!emptyPotion.name.Contains(flaskName))
+            {
+                // Animation flask détruite
+                Debug.Log("La flask ne match pas avec la recette.");
+                return;
+            }
             foreach (Transform child in emptyPotion.transform)
             {
                 if (child.name == "Fill")
                 {
-                    child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
+                    //child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
 
                     if (GoodPotion != null)
                     {
                         GoodPotion.gameObject.SetActive(true);
                         GoodPotion.Play();
                     }
-                    else
-                        Debug.Log("Couldn't play animation good");
 
                     Chest.SetPotion(emptyPotion);
 
                     break;
                 }
             }
-        } else
+        }
+        else
         {
             if (BadPotion != null)
             {
                 BadPotion.gameObject.SetActive(true);
                 BadPotion.Play();
-            } else
-                Debug.Log("Couldn't play animation bad");
+            }
+            foreach (Hand hand in Player.instance.hands)
+            {
+                foreach (var objects in hand.AttachedObjects)
+                {
+                    if (objects.attachedObject == emptyPotion)
+                    {
+                        hand.DetachObject(objects.attachedObject);
+                        break;
+                    }
+                }
+            }
         }
         EmptyCauldron();
     }
