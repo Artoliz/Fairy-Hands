@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
         ingredients.Clear();
     }
 
-    private void InitGameRecipes()
+    IEnumerator InitGameRecipes(bool isTuto)
     {
         int nbRecipes = UnityEngine.Random.Range(4, 6);
         Array names = Enum.GetValues(typeof(RecipeName));
@@ -193,9 +193,9 @@ public class GameManager : MonoBehaviour
         int i = 0;
         while (GameRecipes.Count < nbRecipes)
         {
-            //int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
-            //if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
-                GameRecipes.Add((RecipeName)i, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+            int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
+            if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
+                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
             i += 1;
         }
 
@@ -219,6 +219,7 @@ public class GameManager : MonoBehaviour
 
         if (Book != null)
             Book.CreateBook(GameRecipes);
+        yield return 0;
     }
 
     private void CheckIfAllRecipesAreDone()
@@ -266,9 +267,9 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
-    public void StartGame()
+    public void StartGame(bool isTuto)
     {
-        InitGameRecipes();
+        StartCoroutine(InitGameRecipes(false));
         PlayerPoints = 0;
         // Start Timer
     }
@@ -279,14 +280,7 @@ public class GameManager : MonoBehaviour
         GameRecipes.Clear();
         Storage.StopGame();
         PlayerPoints = 0;
-        StartCoroutine(Init());
-    }
-
-    IEnumerator Init()
-    {
-        yield return new WaitForSeconds(0.1f);
-        InitGameRecipes();
-        // Reset Timer
+        StartCoroutine(InitGameRecipes(false));
     }
 
     public void StopGame()

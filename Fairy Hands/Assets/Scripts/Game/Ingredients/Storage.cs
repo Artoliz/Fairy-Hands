@@ -38,6 +38,11 @@ public class Storage : MonoBehaviour
 
     public void GenerateIngredientsGetter(List<Ingredient.Type> ingredients)
     {
+        StartCoroutine(InstantiatePrefabsGetter(ingredients));
+    }
+
+    IEnumerator InstantiatePrefabsGetter(List<Ingredient.Type> ingredients)
+    {
         List<Ingredient.Type> instantiates = new List<Ingredient.Type>();
 
         foreach (GameObject getter in Getters)
@@ -49,23 +54,19 @@ public class Storage : MonoBehaviour
                 if (getter.name.Contains(ingredient.ToString()) && !instantiates.Contains(ingredient))
                 {
                     GameObject tmp = Instantiate(getter);
+                    yield return new WaitForSeconds(0.05f);
                     tmp.transform.SetParent(transform);
                     tmp.transform.position = _positions[_ingredientsOffset];
                     _ingredientsOffset += 1;
                     _ingredientsObj.Add(tmp);
                     instantiates.Add(ingredient);
                     if (_ingredientsOffset >= _positions.Count)
-                        return;
+                        yield return new WaitForSeconds(0f);
                     break;
                 }
             }
         }
 
-        StartCoroutine(InstantiateOtherPrefabsGetter(instantiates));
-    }
-
-    IEnumerator InstantiateOtherPrefabsGetter(List<Ingredient.Type> instantiates)
-    {
         Array ings = Enum.GetValues(typeof(Ingredient.Type));
         foreach (var ing in ings)
         {

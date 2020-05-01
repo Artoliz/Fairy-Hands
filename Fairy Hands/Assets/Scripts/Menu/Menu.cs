@@ -30,7 +30,7 @@ public class Menu : MonoBehaviour
             {
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
-                GameManager.Instance.StartGame();
+                GameManager.Instance.StartGame(false);
                 break;
             }
         }
@@ -44,7 +44,7 @@ public class Menu : MonoBehaviour
             {
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
-                GameManager.Instance.StartGame();
+                GameManager.Instance.StartGame(false);
                 break;
             }
         }
