@@ -102,6 +102,9 @@
               <e p="SpoonAutoRotate.cs" t="Include" />
             </e>
             <e p="Chest.cs" t="Include" />
+            <e p="Floater" t="Include">
+              <e p="Floater.cs" t="Include" />
+            </e>
             <e p="GameManager.cs" t="Include" />
             <e p="Ingredients" t="Include">
               <e p="Board.cs" t="Include" />
