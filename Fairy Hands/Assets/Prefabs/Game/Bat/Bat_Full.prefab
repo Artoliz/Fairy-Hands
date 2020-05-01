@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1690998266108924193}
   - component: {fileID: 6174829263890451457}
   - component: {fileID: 6174829263890451456}
-  - component: {fileID: 3608746575338370032}
+  - component: {fileID: 1698009333458835198}
   - component: {fileID: 6174829263890451455}
   - component: {fileID: 6174829263890451454}
   - component: {fileID: 6174829263890451453}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e640d31faca11d94fb7454b853d3d0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3608746575338370032
+--- !u!114 &1698009333458835198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,12 +165,12 @@ MonoBehaviour:
   poseEditorExpanded: 1
   blendEditorExpanded: 1
   poseNames:
-  - Bat (MAIN)
+  - Bat_Full (MAIN)
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 67ddc79c8f015664b9f24095be242436, type: 2}
+  skeletonMainPose: {fileID: 11400000, guid: 131c14f39d7d08a4ca37d16ed5009a73, type: 2}
   skeletonAdditionalPoses: []
   showLeftPreview: 0
   showRightPreview: 0
