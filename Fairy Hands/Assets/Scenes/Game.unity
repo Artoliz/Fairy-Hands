@@ -6499,26 +6499,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1457096012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2101458506451953296, guid: e669b8e444fef1d49b74687ccb3a0cda,
-    type: 3}
-  m_PrefabInstance: {fileID: 2057987202}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1457096013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457096012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14124b46ede338941966548e59115138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0.03
-  frequency: 0.4
 --- !u!1 &1489250096
 GameObject:
   m_ObjectHideFlags: 0
@@ -10884,10 +10864,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1512385169, guid: e669b8e444fef1d49b74687ccb3a0cda, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 752809233909146218, guid: e669b8e444fef1d49b74687ccb3a0cda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10956,7 +10932,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2057987202}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457096012}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00fe43e3a5b522841b0d3e6c21c358c2, type: 3}
@@ -37167,6 +37143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chest_Potions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015622037248578240, guid: 9b6b72e27c6f6f34297fd94211b19122,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b6b72e27c6f6f34297fd94211b19122, type: 3}
