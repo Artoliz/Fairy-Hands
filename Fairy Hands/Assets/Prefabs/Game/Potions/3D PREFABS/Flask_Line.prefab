@@ -211,10 +211,11 @@ GameObject:
   - component: {fileID: 959062439353179716}
   - component: {fileID: 959062439353179717}
   - component: {fileID: 7066203322126255033}
+  - component: {fileID: 4385333067318836911}
   - component: {fileID: 114397658588277858}
   - component: {fileID: 114020263059331858}
   m_Layer: 0
-  m_Name: Potion_4
+  m_Name: Flask_Line
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +318,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e640d31faca11d94fb7454b853d3d0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4385333067318836911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958111703823767877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - Flask_line (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: 4a8fd1b6aaa72014a81ed096970d3f27, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
 --- !u!114 &114397658588277858
 MonoBehaviour:
   m_ObjectHideFlags: 0
