@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752809233909146218}
   - component: {fileID: 5376554363214903690}
+  - component: {fileID: 1457096013}
   m_Layer: 0
   m_Name: AutoRecipesBook
   m_TagString: Untagged
@@ -57,6 +58,20 @@ MonoBehaviour:
   - {fileID: 5469429099240590551, guid: 76d5287d578ad184baa97e8613eceb2a, type: 3}
   bookController: {fileID: 4747929967133155272}
   pageBackground: []
+--- !u!114 &1457096013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101458506451953296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14124b46ede338941966548e59115138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.03
+  frequency: 0.4
 --- !u!1001 &1527461201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +146,10 @@ PrefabInstance:
     - target: {fileID: 19800000, guid: 7b56cd9b663f23f429e131a54ec87db0, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 7b56cd9b663f23f429e131a54ec87db0, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b56cd9b663f23f429e131a54ec87db0, type: 3}
