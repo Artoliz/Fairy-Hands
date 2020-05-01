@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a7edf56e1f36b4a901cbfe85881619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerPoints: 0
   Book: {fileID: 0}
   Storage: {fileID: 0}

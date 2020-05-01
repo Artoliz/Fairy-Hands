@@ -244,7 +244,7 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    public string IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
+    public Pair<string, string> IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
         if (ingredients.Count == 0)
             return null;
@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour
                     Book.RecipeDone(recipe.Name);
 
                 CheckIfAllRecipesAreDone();
-                return recipe.FlaskName;
+                return new Pair<string, string>(recipe.Name.ToString(), recipe.FlaskName);
             }
         }
         return null;

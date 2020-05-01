@@ -34,10 +34,10 @@ public class Cauldron : MonoBehaviour
 
     public void CreateRecipe(GameObject emptyPotion)
     {
-        string flaskName = GameManager.Instance.IsRecipeExist(Ingredients);
-        if (flaskName != null)
+        Pair<string, string> recipe = GameManager.Instance.IsRecipeExist(Ingredients);
+        if (recipe != null)
         {
-            if (!emptyPotion.name.Contains(flaskName))
+            if (!emptyPotion.name.Contains(recipe.Second))
             {
                 // Animation flask détruite
                 Debug.Log("La flask ne match pas avec la recette.");
@@ -47,7 +47,14 @@ public class Cauldron : MonoBehaviour
             {
                 if (child.name == "Fill")
                 {
-                    //child.GetComponent<Renderer>().material = PotionVisuals[Random.Range(0, PotionVisuals.Length - 1)];
+                    foreach (Material visual in PotionVisuals)
+                    {
+                        if (visual.name.Contains(recipe.First))
+                        {
+                            child.GetComponent<Renderer>().material = visual;
+                            break;
+                        }
+                    }
 
                     if (GoodPotion != null)
                     {
