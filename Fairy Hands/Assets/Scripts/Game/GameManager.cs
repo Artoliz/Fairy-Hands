@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
         ingredients.Clear();
     }
 
-    IEnumerator InitGameRecipes(bool isTuto)
+    private void InitGameRecipes(bool isTuto)
     {
         int nbRecipes = UnityEngine.Random.Range(4, 6);
         Array names = Enum.GetValues(typeof(RecipeName));
@@ -219,7 +219,6 @@ public class GameManager : MonoBehaviour
 
         if (Book != null)
             Book.CreateBook(GameRecipes);
-        yield return 0;
     }
 
     private void CheckIfAllRecipesAreDone()
@@ -269,7 +268,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(bool isTuto)
     {
-        StartCoroutine(InitGameRecipes(false));
+        InitGameRecipes(false);
         PlayerPoints = 0;
         // Start Timer
     }
@@ -280,7 +279,7 @@ public class GameManager : MonoBehaviour
         GameRecipes.Clear();
         Storage.StopGame();
         PlayerPoints = 0;
-        StartCoroutine(InitGameRecipes(false));
+        InitGameRecipes(false);
     }
 
     public void StopGame()
