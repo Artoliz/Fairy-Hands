@@ -10924,6 +10924,150 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutoRecipesBook
       objectReference: {fileID: 0}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[0]
+      value: 
+      objectReference: {fileID: 508174522834290323, guid: 348b6ab5766b16940a295c1158109737,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[1]
+      value: 
+      objectReference: {fileID: 6618522966393897977, guid: ff6972393dafdff43be5228b7b5f20a6,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[2]
+      value: 
+      objectReference: {fileID: 5025133972953566683, guid: b261f297e171cbf4e8cc35e5009228be,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[3]
+      value: 
+      objectReference: {fileID: 5000536257899378811, guid: 54d3bd5ab8e65644ebb1853e62a77bdf,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[4]
+      value: 
+      objectReference: {fileID: 112486, guid: 66108be0370713549b6aaf37fad753e8, type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[5]
+      value: 
+      objectReference: {fileID: 191882, guid: 47452dd039f48b44380377f4e0a3a385, type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[6]
+      value: 
+      objectReference: {fileID: 191882, guid: 47452dd039f48b44380377f4e0a3a385, type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiTutoPages.Array.data[7]
+      value: 
+      objectReference: {fileID: 140354, guid: be8ef39e87e91d649b47ba050389712d, type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiIntroTutoPage
+      value: 
+      objectReference: {fileID: 2616473478181079682, guid: 9c8ca1b1b7f69fd44ad130d4dd7bdaa7,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiIntroRecipePage
+      value: 
+      objectReference: {fileID: 909465266738095101, guid: 737d4e6c23c3b084ab433f063bdd8d0f,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[0]
+      value: 
+      objectReference: {fileID: 2771316599320272806, guid: 2c8889d7adec171448bbafe1c361e893,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[1]
+      value: 
+      objectReference: {fileID: 2790951572070610104, guid: 04b98b6587d72b44bb16a27a028bc67c,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[2]
+      value: 
+      objectReference: {fileID: 3261272493928859211, guid: e3ccdbc784a3aff4cb93cdcdf6c70498,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[3]
+      value: 
+      objectReference: {fileID: 2214182712446141167, guid: e97be939a5576cd49a4971ede8352ce0,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[4]
+      value: 
+      objectReference: {fileID: 6002419383023659511, guid: 8cf5eae2316d1b040ac3e471ceb6fbae,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[5]
+      value: 
+      objectReference: {fileID: 8257343181096576762, guid: 85da0cff6362cac458175ded6591fcac,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[6]
+      value: 
+      objectReference: {fileID: 1084297450870492251, guid: 186d80e88cf222c44a0ef83530475238,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[7]
+      value: 
+      objectReference: {fileID: 5758437491974146986, guid: 683cfe5af4c9bcf49a0cb25395dca578,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[8]
+      value: 
+      objectReference: {fileID: 211422064935871052, guid: ad800fec84013b845afcfd1b7534660c,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[9]
+      value: 
+      objectReference: {fileID: 5933206743794232186, guid: 93878b9437e547e4ba5c399bfb869bc9,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[10]
+      value: 
+      objectReference: {fileID: 568945687111857602, guid: e8210f739de6fcb4289eeb221f1745ee,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiRecipePages.Array.data[11]
+      value: 
+      objectReference: {fileID: 5469429099240590551, guid: 76d5287d578ad184baa97e8613eceb2a,
+        type: 3}
+    - target: {fileID: 5376554363214903690, guid: e669b8e444fef1d49b74687ccb3a0cda,
+        type: 3}
+      propertyPath: UiLastEmptyPage
+      value: 
+      objectReference: {fileID: 6181598605385257470, guid: 0fced5ee297ff84439148da595a44254,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e669b8e444fef1d49b74687ccb3a0cda, type: 3}
 --- !u!114 &2057987203 stripped

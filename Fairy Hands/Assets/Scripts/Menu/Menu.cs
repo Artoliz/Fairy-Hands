@@ -44,7 +44,7 @@ public class Menu : MonoBehaviour
             {
                 startMenu.SetActive(false);
                 gameMenu.SetActive(true);
-                GameManager.Instance.StartGame(false);
+                GameManager.Instance.StartGame(true);
                 break;
             }
         }

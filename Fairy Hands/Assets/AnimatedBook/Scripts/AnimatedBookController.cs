@@ -88,7 +88,7 @@ public class AnimatedBookController : MonoBehaviour
     private float t = 0; // Used for animation progression
     private float speed = 2.5f; // Speed of turning page animation
     private int currentPage = 0; // The index of the current page visible
-    private PAGES_TRANSITIONS inTransition = PAGES_TRANSITIONS.NONE; // True when a page is being turned
+    public PAGES_TRANSITIONS inTransition = PAGES_TRANSITIONS.NONE; // True when a page is being turned
 
 
     // Getter and setter for book state
@@ -152,7 +152,6 @@ public class AnimatedBookController : MonoBehaviour
         // Deactivate invisible pages 2 and 3 at startupa
         bookPages[1].page.gameObject.SetActive(false);
         bookPages[2].page.gameObject.SetActive(false);
-        
     }
 
     // Initialize the variables references
@@ -204,11 +203,17 @@ public class AnimatedBookController : MonoBehaviour
             bookPages[i].UiRecto.transform.SetParent(bookPages[i].RectoImage.transform, false);
             bookPages[i].UiRecto.GetComponentInChildren<UiButtonController>().ActivateRightButton();
 
-            int done = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetDoneRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
-            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(done);
 
-            int toDo = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
-            bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetToDo(toDo);
+            AutoBookRecipeCounter counter = bookPages[i].UiRecto.GetComponentInChildren<AutoBookRecipeCounter>();
+            if (counter != null)
+            {
+                AutoBookController pageController = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>();
+                int done = pageController.GetDoneRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+                counter.SetDone(done);
+            
+                int toDo = pageController.GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
+                counter.SetToDo(toDo);
+            }
         }
 
         if (bookPages[i].UiVerso != null)
@@ -232,15 +237,19 @@ public class AnimatedBookController : MonoBehaviour
         {
             bookPages[i].UiVerso = Instantiate(pagesUi[pageIndex].UiVerso);
             bookPages[i].UiVerso.transform.SetParent(bookPages[i].VersoImage.transform, false);
-            
-            int done = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetDoneRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
-            bookPages[i].UiVerso.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(done);
-
-            int toDo = bookPages[i].UiRecto.GetComponentInParent<AutoBookController>().GetToDoRecipe(pagesUi[pageIndex].UiRecto.gameObject.name);
-            bookPages[i].UiVerso.GetComponentInChildren<AutoBookRecipeCounter>().SetToDo(toDo);
-
             bookPages[i].UiVerso.GetComponentInChildren<UiButtonController>().ActivateLeftButton();
 
+            AutoBookRecipeCounter counter = bookPages[i].UiVerso.GetComponentInChildren<AutoBookRecipeCounter>();
+            if (counter != null)
+            {
+                AutoBookController pageController = bookPages[i].UiVerso.GetComponentInParent<AutoBookController>();
+
+                int done = pageController.GetDoneRecipe(pagesUi[pageIndex].UiVerso.gameObject.name);
+                counter.SetDone(done);
+
+                int toDo = pageController.GetToDoRecipe(pagesUi[pageIndex].UiVerso.gameObject.name);
+                counter.SetToDo(toDo);
+            }
         }
     }
 
@@ -284,27 +293,34 @@ public class AnimatedBookController : MonoBehaviour
     public void CloseBook()
     {
         anim.SetTrigger("CloseBookRight");
-        Reset();
+    }
+
+    public void OpenBookAt(int page)
+    {
+        if (pagesUi.Count > 0)
+        {
+            ActivatePage(0, currentPage);
+        }
+
+        while (page > currentPage)
+            NextPage();
+
+        anim.SetTrigger("OpenBook");
     }
 
     public void OpenBook()
     {
         if (pagesUi.Count > 0)
+        {
             ActivatePage(0, currentPage);
+        }
+
         anim.SetTrigger("OpenBook");
     }
 
     public void TurnToNextPage()
     {
-        // If book is closed, open it
-        if (state == BOOK_STATE.CLOSED && currentPage == 0)
-        {
-            if (pagesUi.Count > 0)
-                ActivatePage(0, currentPage);
-            anim.SetTrigger("OpenBook");
-        }
-        // If book is opened ...
-        else if (state == BOOK_STATE.OPENED)
+        if (state == BOOK_STATE.OPENED)
         {
             // If we are not in the last page, we turn the page
             if (currentPage < pagesUi.Count)
@@ -321,34 +337,33 @@ public class AnimatedBookController : MonoBehaviour
                     StartCoroutine("TurnToNextPageTransition");
                 }
             }
-            // If we are in the last page, we close the book
-            else
-            {
-                anim.SetTrigger("CloseBookLeft");
-            }
+        }
+    }
+
+    public void NextPage()
+    {
+        if (currentPage < pagesUi.Count)
+        {
+            TurnToNextPageWithoutTransition();
+        }
+    }
+
+
+    public void PreviousPage()
+    {
+        if (currentPage > 0)
+        {
+            TurnToPreviousPageWithoutTransition();
         }
     }
 
     public void TurnToPreviousPage()
     {
-        // If book is closed, open it
-        if (state == BOOK_STATE.CLOSED)
+        if (state == BOOK_STATE.OPENED)
         {
-            anim.SetTrigger("OpenBook");
-        }
-        // If book is opened ...
-        else if (state == BOOK_STATE.OPENED)
-        {
-            if (currentPage >= 0)
+            if (currentPage > 0)
             {
-                // If we are in the first page and not in transition, close the book
-                if (currentPage == 0 && inTransition == PAGES_TRANSITIONS.NONE)
-                {
-                    anim.SetTrigger("CloseBookRight");
-                    return;
-                }
-                // Otherwise turn the page
-                else if (currentPage > 0 && inTransition == PAGES_TRANSITIONS.NONE)
+                if (currentPage > 0 && inTransition == PAGES_TRANSITIONS.NONE)
                 {
                     currentPage--;
                 }
@@ -423,6 +438,7 @@ public class AnimatedBookController : MonoBehaviour
         TransitionFinished();
     }
 
+
     // Animation during turning to previous page
     IEnumerator TurnToPreviousPageTransition()
     {
@@ -469,6 +485,43 @@ public class AnimatedBookController : MonoBehaviour
         bookPages[currentPage % 3].page.localRotation = pageUnturnedRotation;
 
         TransitionFinished();
+    }
+
+    // Animation during turning to next page
+    void TurnToNextPageWithoutTransition()
+    {
+        // Activate the next page just after animation has started to prevent visual overlap
+        if (currentPage + 1 < pagesUi.Count)
+        {
+            ActivatePage((currentPage + 1) % 3, currentPage + 1);
+
+            // Deactivate the previous page
+            DeactivatePage((currentPage + 2) % 3);
+
+            bookPages[currentPage % 3].page.localRotation = pageTurnedRotation;
+
+            currentPage++;
+            if (currentPage > pagesUi.Count)
+            {
+                currentPage = pagesUi.Count;
+            }
+        }
+    }
+
+    // Animation during turning to previous page
+    void TurnToPreviousPageWithoutTransition()
+    {
+        // Activate the previous page just after animation has started to prevent visual overlap
+        if (currentPage > 0)
+        {
+            ActivatePage((currentPage + 2) % 3, currentPage - 1);
+
+            // Deactivate the next page just before animation finish to prevent visual overlap
+            DeactivatePage((currentPage + 1) % 3);
+
+            bookPages[currentPage % 3].page.localRotation = pageUnturnedRotation;
+            currentPage--;
+        }
     }
 
     // When transition is finished, reset variables used during transition

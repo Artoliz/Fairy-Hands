@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     private void UpdateTimer()
     {
         seconds += Time.deltaTime;
-        TimerText.text = hours + "h:" + minutes.ToString("00") + "m:" + ((int)seconds).ToString("00") + "s";
+        //TimerText.text = hours + "h:" + minutes.ToString("00") + "m:" + ((int)seconds).ToString("00") + "s";
         if (seconds >= 60)
         {
             minutes++;
@@ -279,7 +279,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (Book != null)
-            Book.CreateBook(GameRecipes);
+            Book.CreateBook(GameRecipes, isTuto);
     }
 
     private void CheckIfAllRecipesAreDone()
@@ -340,7 +340,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(bool isTuto)
     {
-        InitGameRecipes(false);
+        InitGameRecipes(isTuto);
         PlayerPoints = 0;
         seconds = 0;
         minutes = 0;
