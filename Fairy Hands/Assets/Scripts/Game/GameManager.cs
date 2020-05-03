@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,21 +11,80 @@ public class GameManager : MonoBehaviour
 
     public int PlayerPoints = 0;
 
+    private float seconds = 0;
+    private float minutes = 0;
+    private float hours = 0;
+
+    private Score Score;
+
     private List<Recipe> Recipes = new List<Recipe>();
 
     private Dictionary<RecipeName, Pair<int, int>> GameRecipes = new Dictionary<RecipeName, Pair<int, int>>();
 
     [SerializeField] private AutoBookController Book = null;
     [SerializeField] private Storage Storage = null;
+    [SerializeField] private Text TimerText = null;
 
     private void Awake()
     {
         Instance = this;
+        Score = new Score();
+
+        LoadScores();
     }
 
     private void Start()
     {
         InitRecipes();
+    }
+
+    private void Update()
+    {
+        UpdateTimer();
+    }
+
+    private void UpdateTimer()
+    {
+        seconds += Time.deltaTime;
+        TimerText.text = hours + "h:" + minutes.ToString("00") + "m:" + ((int)seconds).ToString("00") + "s";
+        if (seconds >= 60)
+        {
+            minutes++;
+            seconds = 0;
+        }
+        else if (minutes >= 60)
+        {
+            hours++;
+            minutes = 0;
+        }
+    }
+
+    private void SaveScore(int points)
+    {
+        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Scores")))
+            Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Scores"));
+
+        Score.Scores.Add("test", points);
+
+        var path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
+        File.WriteAllText(path, JsonUtility.ToJson(Score, true));
+    }
+
+    private void LoadScores()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
+
+        if (File.Exists(path))
+        {
+            Score = JsonUtility.FromJson<Score>(File.ReadAllText(path));
+
+            foreach (string name in Score.Scores.Keys)
+            {
+                Debug.Log(name + " : " + Score.Scores[name]);
+            }
+
+            // Set 10 best scores on board.
+        }
     }
 
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> required, Dictionary<Ingredient.Type, int> given)
@@ -234,6 +295,17 @@ public class GameManager : MonoBehaviour
         if (nbDone == GameRecipes.Count)
         {
             Debug.Log("Le jeu est fini: Toutes les recettes sont faites!");
+
+            DateTime time = new DateTime();
+            time.AddHours(hours);
+            time.AddMinutes(minutes);
+            time.AddSeconds(seconds);
+
+            int points = PlayerPoints;
+
+            StopGame();
+
+            SaveScore(points);
         }
     }
 
@@ -270,6 +342,9 @@ public class GameManager : MonoBehaviour
     {
         InitGameRecipes(false);
         PlayerPoints = 0;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
         // Start Timer
     }
 
@@ -279,6 +354,9 @@ public class GameManager : MonoBehaviour
         GameRecipes.Clear();
         Storage.StopGame();
         PlayerPoints = 0;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
         InitGameRecipes(false);
     }
 
@@ -288,6 +366,9 @@ public class GameManager : MonoBehaviour
         Storage.StopGame();
         Book.CloseBook();
         PlayerPoints = 0;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
         // Stop Timer
     }
 }
