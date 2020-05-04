@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private float minutes = 0;
     private float hours = 0;
 
+    private bool GameStarted = false;
+
     private Score Score;
 
     private List<Recipe> Recipes = new List<Recipe>();
@@ -26,6 +28,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Storage Storage = null;
     [SerializeField] private TextMeshPro TimerText = null;
     [SerializeField] private Scores Scores = null;
+    [SerializeField] private GameObject InputName = null;
+    public TextMeshProUGUI Name = null;
+
+    private string _name = "";
 
     private void Awake()
     {
@@ -33,6 +39,7 @@ public class GameManager : MonoBehaviour
         Score = new Score();
 
         LoadScores();
+        InputName.SetActive(false);
     }
 
     private void Start()
@@ -42,13 +49,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateTimer();
+
+        if (GameStarted)
+            UpdateTimer();
     }
 
     private void UpdateTimer()
     {
         seconds += Time.deltaTime;
-        //TimerText.text = hours + "h:" + minutes.ToString("00") + "m:" + ((int)seconds).ToString("00") + "s";
+        TimerText.text = minutes.ToString("00") + ":" + ((int)seconds).ToString("00");
         if (seconds >= 60)
         {
             minutes++;
@@ -61,12 +70,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SaveScore(int points)
+    private void SaveScore()
     {
         if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Scores")))
             Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Scores"));
 
-        Score.Scores.Add("Test", points);
+        Score.Scores.Add(_name, PlayerPoints);
         Scores.SetScores(Score.Scores);
 
         var path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
@@ -300,10 +309,18 @@ public class GameManager : MonoBehaviour
 
             int points = PlayerPoints;
 
-            StopGame();
+            GameStarted = false;
 
-            SaveScore(points);
+            InputName.SetActive(true);
         }
+    }
+
+    public void ValidateName()
+    {
+        _name = InputName.GetComponentInChildren<VirtualKeyboard>().GetString();
+        SaveScore();
+        StopGame();
+        InputName.SetActive(false);
     }
 
     public bool IsFlaskMatch(GameObject emptyPotion)
@@ -342,7 +359,7 @@ public class GameManager : MonoBehaviour
         seconds = 0;
         minutes = 0;
         hours = 0;
-        // Start Timer
+        GameStarted = true;
     }
 
     public void RestartGame()
@@ -355,6 +372,7 @@ public class GameManager : MonoBehaviour
         minutes = 0;
         hours = 0;
         InitGameRecipes(false);
+        GameStarted = true;
     }
 
     public void StopGame()
@@ -366,6 +384,6 @@ public class GameManager : MonoBehaviour
         seconds = 0;
         minutes = 0;
         hours = 0;
-        // Stop Timer
+        GameStarted = false;
     }
 }
