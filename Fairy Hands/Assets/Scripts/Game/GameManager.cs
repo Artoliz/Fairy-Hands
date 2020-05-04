@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +24,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private AutoBookController Book = null;
     [SerializeField] private Storage Storage = null;
-    [SerializeField] private Text TimerText = null;
+    [SerializeField] private TextMeshPro TimerText = null;
+    [SerializeField] private Scores Scores = null;
 
     private void Awake()
     {
@@ -64,7 +66,8 @@ public class GameManager : MonoBehaviour
         if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Scores")))
             Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Scores"));
 
-        Score.Scores.Add("test", points);
+        Score.Scores.Add("Test", points);
+        Scores.SetScores(Score.Scores);
 
         var path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
         File.WriteAllText(path, JsonUtility.ToJson(Score, true));
@@ -77,13 +80,7 @@ public class GameManager : MonoBehaviour
         if (File.Exists(path))
         {
             Score = JsonUtility.FromJson<Score>(File.ReadAllText(path));
-
-            foreach (string name in Score.Scores.Keys)
-            {
-                Debug.Log(name + " : " + Score.Scores[name]);
-            }
-
-            // Set 10 best scores on board.
+            Scores.SetScores(Score.Scores);
         }
     }
 

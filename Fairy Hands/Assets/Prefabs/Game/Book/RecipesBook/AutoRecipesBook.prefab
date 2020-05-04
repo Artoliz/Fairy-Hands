@@ -46,7 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fe43e3a5b522841b0d3e6c21c358c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UiPages:
+  UiIntroTutoPage: {fileID: 2616473478181079682, guid: 9c8ca1b1b7f69fd44ad130d4dd7bdaa7,
+    type: 3}
+  UiIntroRecipePage: {fileID: 909465266738095101, guid: 737d4e6c23c3b084ab433f063bdd8d0f,
+    type: 3}
+  UiLastEmptyPage: {fileID: 6181598605385257470, guid: 0fced5ee297ff84439148da595a44254,
+    type: 3}
+  UiTutoPages:
+  - {fileID: 508174522834290323, guid: 348b6ab5766b16940a295c1158109737, type: 3}
+  - {fileID: 6618522966393897977, guid: ff6972393dafdff43be5228b7b5f20a6, type: 3}
+  - {fileID: 5025133972953566683, guid: b261f297e171cbf4e8cc35e5009228be, type: 3}
+  - {fileID: 5000536257899378811, guid: 54d3bd5ab8e65644ebb1853e62a77bdf, type: 3}
+  UiRecipePages:
   - {fileID: 2771316599320272806, guid: 2c8889d7adec171448bbafe1c361e893, type: 3}
   - {fileID: 2790951572070610104, guid: 04b98b6587d72b44bb16a27a028bc67c, type: 3}
   - {fileID: 3261272493928859211, guid: e3ccdbc784a3aff4cb93cdcdf6c70498, type: 3}
@@ -54,7 +65,10 @@ MonoBehaviour:
   - {fileID: 6002419383023659511, guid: 8cf5eae2316d1b040ac3e471ceb6fbae, type: 3}
   - {fileID: 8257343181096576762, guid: 85da0cff6362cac458175ded6591fcac, type: 3}
   - {fileID: 1084297450870492251, guid: 186d80e88cf222c44a0ef83530475238, type: 3}
+  - {fileID: 5758437491974146986, guid: 683cfe5af4c9bcf49a0cb25395dca578, type: 3}
+  - {fileID: 211422064935871052, guid: ad800fec84013b845afcfd1b7534660c, type: 3}
   - {fileID: 5933206743794232186, guid: 93878b9437e547e4ba5c399bfb869bc9, type: 3}
+  - {fileID: 568945687111857602, guid: e8210f739de6fcb4289eeb221f1745ee, type: 3}
   - {fileID: 5469429099240590551, guid: 76d5287d578ad184baa97e8613eceb2a, type: 3}
   bookController: {fileID: 4747929967133155272}
   pageBackground: []

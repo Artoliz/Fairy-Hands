@@ -46,3 +46,5 @@ MonoBehaviour:
   PlayerPoints: 0
   Book: {fileID: 0}
   Storage: {fileID: 0}
+  TimerText: {fileID: 0}
+  Scores: {fileID: 0}
