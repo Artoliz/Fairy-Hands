@@ -34,11 +34,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998942852648348}
-  m_LocalRotation: {x: -0.18476875, y: -0, z: -0, w: 0.98278207}
+  m_LocalRotation: {x: -0.18476619, y: 0, z: 0, w: 0.98278254}
   m_LocalPosition: {x: 0, y: 0.005338311, z: 0.009124905}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
-  - {fileID: 680914844314814777}
+  - {fileID: 7235439620182191443}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -21.295, y: 0, z: 0}
@@ -250,9 +250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextModifier: {fileID: 2885696804717665214, guid: 1560290e82f8e9549affec5ec28370cf,
     type: 3}
-  MaxHit: 2
-  MaxHitTotal: 5
+  MaxHit: 1
+  MaxHitTotal: 3
   CurrentHit: 0
+  ProgressBar: {fileID: 7235439620182191443}
 --- !u!64 &206946324
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -310,6 +311,37 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
+--- !u!1 &722411261226116297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7235439620182191443}
+  m_Layer: 0
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7235439620182191443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722411261226116297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_Children:
+  - {fileID: 680914844314814777}
+  m_Father: {fileID: 4316840790912696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945198313618181571
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +354,7 @@ GameObject:
   - component: {fileID: 7594749224158272596}
   - component: {fileID: 8890323614409255454}
   m_Layer: 0
-  m_Name: ProgressBar
+  m_Name: ProgressBarValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,8 +368,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945198313618181571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.7}
-  m_LocalScale: {x: 0.9, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.8, z: 5}
   m_Children: []
   m_Father: {fileID: 680914844314814777}
   m_RootOrder: 0
@@ -415,10 +447,10 @@ Transform:
   m_GameObject: {fileID: 4976834092034050490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.5, z: 0}
-  m_LocalScale: {x: 2, y: 0.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 0.5, z: 0.01}
   m_Children:
   - {fileID: 3616717330955902653}
-  m_Father: {fileID: 4316840790912696}
+  m_Father: {fileID: 7235439620182191443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3950600931809375844
@@ -478,6 +510,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5360b5c254ed349a2223c815ba3f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSizeX: 0
-  _size: {x: 0, y: 0, z: 0}
   Progress: {fileID: 3616717330955902653}

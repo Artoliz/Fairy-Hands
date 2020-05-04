@@ -101,7 +101,6 @@
               <e p="FillPotions.cs" t="Include" />
               <e p="SpoonAutoRotate.cs" t="Include" />
             </e>
-            <e p="Chest.cs" t="Include" />
             <e p="Floater" t="Include">
               <e p="Floater.cs" t="Include" />
             </e>
@@ -117,13 +116,22 @@
             <e p="LittleClown" t="Include">
               <e p="Animate.cs" t="Include" />
             </e>
-            <e p="Pair.cs" t="Include" />
-            <e p="Recipe.cs" t="Include" />
-            <e p="Score.cs" t="Include" />
+            <e p="Others" t="Include">
+              <e p="Chest.cs" t="Include" />
+              <e p="Pair.cs" t="Include" />
+              <e p="Recipe.cs" t="Include" />
+            </e>
+            <e p="Scores" t="Include">
+              <e p="Score.cs" t="Include" />
+              <e p="Scores.cs" t="Include" />
+            </e>
             <e p="Tools" t="Include">
               <e p="Crush.cs" t="Include" />
               <e p="Cut.cs" t="Include" />
               <e p="Grate.cs" t="Include" />
+            </e>
+            <e p="Virtual Keyboard" t="Include">
+              <e p="VirtualKeyboard.cs" t="Include" />
             </e>
             <e p="VR" t="Include">
               <e p="BasicInteractions.cs" t="Include" />

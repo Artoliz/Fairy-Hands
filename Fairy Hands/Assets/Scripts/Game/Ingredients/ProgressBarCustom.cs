@@ -4,28 +4,20 @@ using UnityEngine;
 
 public class ProgressBarCustom : MonoBehaviour
 {
-    public float _maxSizeX;
-    public Vector3 _size;
-
     public Transform Progress;
 
-    private void Start()
+    private void Awake()
     {
-        _maxSizeX = Progress.localScale.x;
-        _size = Progress.localScale;
+        Progress.localScale = new Vector3(0, 0.8f, 10);;
+
     }
 
     private void Update()
     {
         transform.LookAt(GameObject.Find("VRCamera").transform);
     }
-
-    public void OnHitChanged()
+    public void OnHitChanged(int currentHit, int maxHitTotal)
     {
-        Modifier parent = GetComponentInParent<Modifier>();
-
-        float currentSizeX = _maxSizeX / parent.MaxHitTotal;
-        Progress.localScale = new Vector3(_size.x - currentSizeX, _size.y, _size.z);
-        _size = Progress.localScale;
+        Progress.localScale = new Vector3(((float)currentHit / (float)maxHitTotal) * 0.9f, 0.8f, 10);
     }
 }
