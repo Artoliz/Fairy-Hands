@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     private Dictionary<RecipeName, Pair<int, int>> GameRecipes = new Dictionary<RecipeName, Pair<int, int>>();
 
     [SerializeField] private AutoBookController Book = null;
-    [SerializeField] private Storage Storage = null;
     [SerializeField] private TextMeshPro TimerText = null;
     [SerializeField] private Scores Scores = null;
     [SerializeField] private GameObject InputName = null;
@@ -266,24 +265,6 @@ public class GameManager : MonoBehaviour
             i += 1;
         }
 
-        if (Storage != null)
-        {
-            List<Ingredient.Type> used = new List<Ingredient.Type>();
-
-            foreach (Recipe recipe in Recipes)
-            {
-                if (GameRecipes.ContainsKey(recipe.Name))
-                {
-                    foreach (Ingredient.Type ing in recipe.Ingredients.Keys)
-                    {
-                        if (!used.Contains(ing))
-                            used.Add(ing);
-                    }
-                }
-            }
-            Storage.GenerateIngredientsGetter(used);
-        }
-
         if (Book != null)
             Book.CreateBook(GameRecipes, isTuto);
     }
@@ -366,7 +347,6 @@ public class GameManager : MonoBehaviour
     {
         Book.CloseBook();
         GameRecipes.Clear();
-        Storage.StopGame();
         PlayerPoints = 0;
         seconds = 0;
         minutes = 0;
@@ -378,7 +358,6 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         GameRecipes.Clear();
-        Storage.StopGame();
         Book.CloseBook();
         PlayerPoints = 0;
         seconds = 0;
