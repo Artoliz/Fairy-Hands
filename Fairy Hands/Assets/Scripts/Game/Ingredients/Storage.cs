@@ -62,6 +62,7 @@ public class Storage : MonoBehaviour
                     instantiates.Add(ingredient);
                     if (_ingredientsOffset >= _positions.Count)
                         yield return new WaitForSeconds(0f);
+                    yield return new WaitForSeconds(0.1f);
                     break;
                 }
             }
@@ -84,11 +85,12 @@ public class Storage : MonoBehaviour
                     instantiates.Add((Ingredient.Type)ing);
                     if (_ingredientsOffset >= _positions.Count)
                         yield return new WaitForSeconds(0f);
+                    yield return new WaitForSeconds(0.1f);
                     break;
                 }
             }
         }
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0f);
     }
 
     public void StopGame()
