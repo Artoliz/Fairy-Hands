@@ -4666,6 +4666,11 @@ PrefabInstance:
       propertyPath: Chest
       value: 
       objectReference: {fileID: 1242004478}
+    - target: {fileID: 6058039186175549440, guid: 62355a28b41bfc844b5b483bcc043ddb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8906199493344483774, guid: 62355a28b41bfc844b5b483bcc043ddb,
         type: 3}
       propertyPath: m_Name
@@ -7746,7 +7751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1368950805
 Transform:
   m_ObjectHideFlags: 0
@@ -12513,6 +12518,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1527428081, guid: e669b8e444fef1d49b74687ccb3a0cda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 752809233909146218, guid: e669b8e444fef1d49b74687ccb3a0cda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38955,6 +38964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chest_Potions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330722741233317706, guid: 9b6b72e27c6f6f34297fd94211b19122,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b6b72e27c6f6f34297fd94211b19122, type: 3}
