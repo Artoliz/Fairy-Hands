@@ -62,9 +62,9 @@ public class AutoBookController : MonoBehaviour
             }
         }
 
-        if (page.UiVerso == null)
+        if (bookController.pagesUi[i].UiVerso == null)
         {
-            page.UiVerso = UiLastEmptyPage;
+            addPageInBook(i, UiLastEmptyPage);
         }
 
         bookController.OpenBook();
