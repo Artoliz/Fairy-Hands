@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 65855703608851808}
   m_Layer: 0
   m_Name: Fish_State_2
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 3014961566968860371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3014961566969090807}
   - {fileID: 3014961566969090805}
@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 2665623492711483066}
+  CameraPos: {fileID: 0}
 --- !u!1 &7150689754868950032
 GameObject:
   m_ObjectHideFlags: 0

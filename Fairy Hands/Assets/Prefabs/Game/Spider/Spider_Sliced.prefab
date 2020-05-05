@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5008527770336151207}
   - component: {fileID: 3365774527768974026}
   - component: {fileID: 114758571926145184}
+  - component: {fileID: 7033885366455609128}
   m_Layer: 0
   m_Name: Spider_Sliced
   m_TagString: Ingredient
@@ -238,6 +239,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 12
+--- !u!65 &7033885366455609128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912718327297828897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 143.52556, y: 50.07016, z: 199.66388}
+  m_Center: {x: -26.370546, y: 19.403969, z: -74.066986}
 --- !u!1 &7912718327297828899
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +263,6 @@ GameObject:
   - component: {fileID: 7912718327297405955}
   - component: {fileID: 7912718327300797475}
   - component: {fileID: 7912718327299831523}
-  - component: {fileID: 2702957558296060746}
   m_Layer: 0
   m_Name: Spider_Leg_8
   m_TagString: Untagged
@@ -316,20 +329,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2702957558296060746
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828899}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300016, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828913
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +340,6 @@ GameObject:
   - component: {fileID: 7912718327297405969}
   - component: {fileID: 7912718327300797489}
   - component: {fileID: 7912718327299831537}
-  - component: {fileID: 7571344640629225424}
   m_Layer: 0
   m_Name: Spider_Leg_1
   m_TagString: Untagged
@@ -408,20 +406,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7571344640629225424
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828913}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828915
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +417,6 @@ GameObject:
   - component: {fileID: 7912718327297405971}
   - component: {fileID: 7912718327300797491}
   - component: {fileID: 7912718327299831539}
-  - component: {fileID: 8526902634991707001}
   m_Layer: 0
   m_Name: Spider01
   m_TagString: Untagged
@@ -500,20 +483,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8526902634991707001
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828915}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828917
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +494,6 @@ GameObject:
   - component: {fileID: 7912718327297405973}
   - component: {fileID: 7912718327300797493}
   - component: {fileID: 7912718327299831541}
-  - component: {fileID: 7698923044755785355}
   m_Layer: 0
   m_Name: Spider_Leg_3
   m_TagString: Untagged
@@ -592,20 +560,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7698923044755785355
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828917}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300006, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828919
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +571,6 @@ GameObject:
   - component: {fileID: 7912718327297405975}
   - component: {fileID: 7912718327300797495}
   - component: {fileID: 7912718327299831543}
-  - component: {fileID: 6587570570672205495}
   m_Layer: 0
   m_Name: Spider_Leg_2
   m_TagString: Untagged
@@ -684,20 +637,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6587570570672205495
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828919}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300004, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828921
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +648,6 @@ GameObject:
   - component: {fileID: 7912718327297405977}
   - component: {fileID: 7912718327300797497}
   - component: {fileID: 7912718327299831545}
-  - component: {fileID: 1598015130978766491}
   m_Layer: 0
   m_Name: Spider_Leg_5
   m_TagString: Untagged
@@ -776,20 +714,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1598015130978766491
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828921}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300010, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828923
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +725,6 @@ GameObject:
   - component: {fileID: 7912718327297405979}
   - component: {fileID: 7912718327300797499}
   - component: {fileID: 7912718327299831547}
-  - component: {fileID: 8527064468743692767}
   m_Layer: 0
   m_Name: Spider_Leg_4
   m_TagString: Untagged
@@ -868,20 +791,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8527064468743692767
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828923}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300008, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828925
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +802,6 @@ GameObject:
   - component: {fileID: 7912718327297405981}
   - component: {fileID: 7912718327300797501}
   - component: {fileID: 7912718327299831549}
-  - component: {fileID: 1254337706506128735}
   m_Layer: 0
   m_Name: Spider_Leg_7
   m_TagString: Untagged
@@ -960,20 +868,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1254337706506128735
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300014, guid: 5ff1a1a76191a554d897664854090cae, type: 3}
 --- !u!1 &7912718327297828927
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +879,6 @@ GameObject:
   - component: {fileID: 7912718327297405983}
   - component: {fileID: 7912718327300797503}
   - component: {fileID: 7912718327299831551}
-  - component: {fileID: 4944425237000957339}
   m_Layer: 0
   m_Name: Spider_Leg_6
   m_TagString: Untagged
@@ -1052,17 +945,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4944425237000957339
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7912718327297828927}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300012, guid: 5ff1a1a76191a554d897664854090cae, type: 3}

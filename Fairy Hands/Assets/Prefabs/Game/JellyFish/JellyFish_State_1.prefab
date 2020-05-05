@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 5706277019948006392}
+  CameraPos: {fileID: 0}
 --- !u!1 &3983537525008890657
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 3983537525008890661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 3983537525008394003}
   - {fileID: 3983537525008394001}

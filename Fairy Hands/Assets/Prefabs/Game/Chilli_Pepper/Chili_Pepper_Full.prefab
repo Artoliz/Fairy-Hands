@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 1278441146531262005}
+  CameraPos: {fileID: 0}
 --- !u!1 &5347703194050939552
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +220,7 @@ GameObject:
   - component: {fileID: 8194873}
   - component: {fileID: 2750252286461114835}
   - component: {fileID: 8130187503330356542}
-  - component: {fileID: 6960215857841697}
+  - component: {fileID: 6490792954267860436}
   m_Layer: 0
   m_Name: Chili_Pepper_Full
   m_TagString: Ingredient
@@ -497,8 +498,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6960215857841697
-MeshCollider:
+--- !u!65 &6490792954267860436
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -507,7 +508,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 60.392212, y: 135.93616, z: 51.195698}
+  m_Center: {x: 0.86237335, y: 6.2829266, z: 23.236902}

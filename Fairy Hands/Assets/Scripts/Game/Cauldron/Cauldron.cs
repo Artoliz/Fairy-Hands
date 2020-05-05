@@ -15,6 +15,7 @@ public class Cauldron : MonoBehaviour
 
     public void AddIngredient(Ingredient.Type ingredient)
     {
+        Debug.Log("Add in cauldron: " + ingredient);
         if (ingredient == Ingredient.Type.None)
         {
             EmptyCauldron();

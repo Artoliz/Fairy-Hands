@@ -62,7 +62,7 @@ public class AutoBookController : MonoBehaviour
             }
         }
 
-        if (bookController.pagesUi[i].UiVerso == null)
+        if (i < bookController.pagesUi.Count && bookController.pagesUi[i].UiVerso == null)
         {
             addPageInBook(i, UiLastEmptyPage);
         }
@@ -97,12 +97,12 @@ public class AutoBookController : MonoBehaviour
     {
         foreach (var page in bookController.bookPages)
         {
-            if (page.UiRecto.gameObject.name.Contains(name.ToString()))
+            if (page.UiRecto != null && page.UiRecto.gameObject.name.Contains(name.ToString()))
             {
                 page.UiRecto.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(_gameRecipes[name].First);
                 break;
             }
-            else if (page.UiVerso.gameObject.name.Contains(name.ToString()))
+            else if (page.UiVerso != null && page.UiVerso.gameObject.name.Contains(name.ToString()))
             {
                 page.UiVerso.GetComponentInChildren<AutoBookRecipeCounter>().SetDone(_gameRecipes[name].First);
                 break;

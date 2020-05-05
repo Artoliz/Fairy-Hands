@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 684877786976077497}
   - component: {fileID: 8630279785903075154}
   - component: {fileID: 1155482759}
+  - component: {fileID: 6065933781976963469}
   m_Layer: 0
   m_Name: cherry_juice
   m_TagString: Ingredient
@@ -232,6 +233,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 16
+--- !u!65 &6065933781976963469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870429813583310085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33088273, y: 1.7039676, z: 0.31694263}
+  m_Center: {x: 0.0069699064, y: -0.080154315, z: -0.006970018}
 --- !u!1 &8870520930556515317
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,10 +257,9 @@ GameObject:
   - component: {fileID: 8867861435106098281}
   - component: {fileID: 8892567939085216491}
   - component: {fileID: 8885413053045988283}
-  - component: {fileID: 8871734317351170867}
   m_Layer: 0
   m_Name: GPVFX_Bottle_D
-  m_TagString: Potion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,19 +323,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8871734317351170867
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8870520930556515317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.44057116, y: 1.750144, z: 0.44057214}
-  m_Center: {x: -0.000993498, y: -0.09381604, z: -0.0000019073486}
 --- !u!1 &8870693206212990081
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8884543826939819507}
   m_Layer: 0
   m_Name: GPVFX_Cork_GPVFX_Corks
-  m_TagString: Potion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 8867076607924788091}
   m_Layer: 0
   m_Name: GPVFX_CORK
-  m_TagString: Potion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 8883929842426825413}
   m_Layer: 0
   m_Name: Fill
-  m_TagString: Potion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

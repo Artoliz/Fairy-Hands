@@ -290,9 +290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextModifier: {fileID: 2556576566397281638, guid: b890a0a53f4a16646beb842f60699257,
     type: 3}
-  MaxHit: 1
+  MaxHit: 2
   MaxHitTotal: 2
   CurrentHit: 0
+  ProgressBar: {fileID: 0}
 --- !u!1 &3525971718212348756
 GameObject:
   m_ObjectHideFlags: 0

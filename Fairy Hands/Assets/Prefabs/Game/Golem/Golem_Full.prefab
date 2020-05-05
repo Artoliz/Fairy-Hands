@@ -380,8 +380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextModifier: {fileID: 5952839814627837806, guid: 8f2757f9be4c6a0408cd7b857c6c979c,
     type: 3}
-  MaxHit: 3
-  MaxHitTotal: 3
+  MaxHit: 8
+  MaxHitTotal: 8
   CurrentHit: 0
   ProgressBar: {fileID: 756050392839597812}
 --- !u!1 &100004
@@ -1429,6 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 5212934733016289666}
+  CameraPos: {fileID: 0}
 --- !u!1 &6575835802837341115
 GameObject:
   m_ObjectHideFlags: 0

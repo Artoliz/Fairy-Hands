@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPoints: 0
   Book: {fileID: 0}
-  Storage: {fileID: 0}
   TimerText: {fileID: 0}
   Scores: {fileID: 0}
+  InputName: {fileID: 0}
+  Name: {fileID: 0}

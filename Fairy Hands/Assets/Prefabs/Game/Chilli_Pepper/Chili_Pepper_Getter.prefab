@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5271848296547769391}
   - component: {fileID: 114220316685599796}
   m_Layer: 0
-  m_Name: Chilli_Pepper_Getter
+  m_Name: Chili_Pepper_Getter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887941173388713032}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.848, y: 9.03, z: -6.148}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalScale: {x: 0.0010315723, y: 0.0010158482, z: 0.0010166389}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

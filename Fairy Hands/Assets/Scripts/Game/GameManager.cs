@@ -92,16 +92,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> required, Dictionary<Ingredient.Type, int> given)
-    {
-        foreach (var givenIngredients in given.Keys)
-        {
-            if (!required.ContainsKey(givenIngredients) || required[givenIngredients] != given[givenIngredients])
-                return false;
-        }
-        return true;
-    }
-
     private void InitRecipes()
     {
         Dictionary<Ingredient.Type, int> ingredients = new Dictionary<Ingredient.Type, int>();
@@ -311,6 +301,18 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
+    private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> requireds, Dictionary<Ingredient.Type, int> givens)
+    {
+        if (requireds.Count != givens.Count)
+            return false;
+        foreach (var required in requireds.Keys)
+        {
+            if (!givens.ContainsKey(required) || requireds[required] != givens[required])
+                return false;
+        }
+        return true;
+    }
+
     public Pair<string, string> IsRecipeExist(Dictionary<Ingredient.Type, int> ingredients)
     {
         if (ingredients.Count == 0)
@@ -318,10 +320,12 @@ public class GameManager : MonoBehaviour
 
         foreach (var recipe in Recipes)
         {
-            if (AreIngredientsMatch(recipe.Ingredients, ingredients) && GameRecipes[recipe.Name] != null && GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
+            if (GameRecipes.ContainsKey(recipe.Name) && AreIngredientsMatch(recipe.Ingredients, ingredients) &&  GameRecipes[recipe.Name].First < GameRecipes[recipe.Name].Second)
             {
                 GameRecipes[recipe.Name].First += 1;
                 PlayerPoints += recipe.Points;
+
+                Debug.Log("Recipe: " + recipe.Name + " done.");
 
                 if (Book != null)
                     Book.RecipeDone(recipe.Name);

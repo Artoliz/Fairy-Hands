@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Scores : MonoBehaviour
 {
-    [SerializeField] private GameObject[] ScoresDisplayeds;
+    [SerializeField] private GameObject[] ScoresDisplayeds = null;
 
 //    myList.Sort(
 //    delegate (KeyValuePair<string, string> pair1,

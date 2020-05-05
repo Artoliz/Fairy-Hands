@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 5115715097521207976}
+  CameraPos: {fileID: 0}
 --- !u!1 &4218269958001848099
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +342,7 @@ GameObject:
   - component: {fileID: 850483332}
   - component: {fileID: 850483331}
   - component: {fileID: 850483330}
+  - component: {fileID: 7595924341740977932}
   m_Layer: 0
   m_Name: Cherry_Full
   m_TagString: Ingredient
@@ -588,6 +590,19 @@ MonoBehaviour:
   MaxHitTotal: 2
   CurrentHit: 0
   ProgressBar: {fileID: 4934215275253026713}
+--- !u!65 &7595924341740977932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218269958001848103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 459.70172, y: 320.40283, z: 323.01627}
+  m_Center: {x: -420.99484, y: 185.25742, z: 307.45477}
 --- !u!1 &6188659924972696427
 GameObject:
   m_ObjectHideFlags: 0

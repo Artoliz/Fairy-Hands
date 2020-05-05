@@ -18,7 +18,8 @@ public class Modifier : MonoBehaviour
 
     public void Update()
     {
-        ProgressBar.eulerAngles = new Vector3(-transform.rotation.x, -transform.rotation.y, -transform.rotation.z);
+        if (ProgressBar)
+            ProgressBar.eulerAngles = new Vector3(-transform.rotation.x, -transform.rotation.y, -transform.rotation.z);
     }
     
     public void ApplyModification()
@@ -34,7 +35,9 @@ public class Modifier : MonoBehaviour
             {
                 modifier.CurrentHit = CurrentHit;
                 modifier.MaxHitTotal = MaxHitTotal;
-                tmp.GetComponentInChildren<ProgressBarCustom>().OnHitChanged(CurrentHit, MaxHitTotal);
+                ProgressBarCustom bar = tmp.GetComponentInChildren<ProgressBarCustom>();
+                if (bar)
+                    bar.OnHitChanged(CurrentHit, MaxHitTotal);
             }
             Destroy(this.gameObject);
         }
