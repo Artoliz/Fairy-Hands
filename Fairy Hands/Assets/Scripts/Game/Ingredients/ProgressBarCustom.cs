@@ -6,6 +6,8 @@ public class ProgressBarCustom : MonoBehaviour
 {
     public Transform Progress;
 
+    public Transform CameraPos;
+
     private void Awake()
     {
         Progress.localScale = new Vector3(0, 0.8f, 10);;
@@ -14,7 +16,8 @@ public class ProgressBarCustom : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(GameObject.Find("VRCamera").transform);
+        transform.LookAt(CameraPos);
+       //transform.LookAt(camera.transform);
     }
     public void OnHitChanged(int currentHit, int maxHitTotal)
     {

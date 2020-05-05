@@ -13771,6 +13771,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 4583792772579164396, guid: c14350502cf20484da0dcb4fe8ea0864,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9928543
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583792772579164396, guid: c14350502cf20484da0dcb4fe8ea0864,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.1193333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583792772579164396, guid: c14350502cf20484da0dcb4fe8ea0864,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583792772579164396, guid: c14350502cf20484da0dcb4fe8ea0864,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -193.70699
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14350502cf20484da0dcb4fe8ea0864, type: 3}
 --- !u!23 &210442449779335631
@@ -30841,25 +30861,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!95 &5996913074277888482
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5996913074285298596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c375a17f5f510d44c839b216989e242d, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!137 &5996913074282123042
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -32025,14 +32026,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5996913074285338500}
-  - component: {fileID: 5996913074277888482}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5996913074285298598
 GameObject:
   m_ObjectHideFlags: 0
