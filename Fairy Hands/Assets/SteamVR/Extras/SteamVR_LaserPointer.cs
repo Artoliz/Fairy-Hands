@@ -79,7 +79,10 @@ namespace Valve.VR.Extras
         public virtual void OnPointerClick(PointerEventArgs e)
         {
             if (PointerClick != null)
+            {
                 PointerClick(this, e);
+                GetComponent<AudioSource>().Play();
+            }
         }
 
         public virtual void OnPointerOut(PointerEventArgs e)

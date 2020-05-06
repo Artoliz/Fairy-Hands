@@ -19,7 +19,10 @@ public class Cut : MonoBehaviour
                 {
                     var modifier = other.gameObject.GetComponent<Modifier>();
                     if (modifier)
+                    {
+                        GetComponent<AudioSource>().Play();
                         modifier.ApplyModification();
+                    }
                 }
             }
         }

@@ -15,6 +15,10 @@ public class Cauldron : MonoBehaviour
     [SerializeField] private ParticleSystem BadPotion = null;
     [SerializeField] private ParticleSystem GoodPotion = null;
 
+    [SerializeField] private AudioSource AudioGlassBreaking = null;
+    [SerializeField] private AudioSource AudioCauldronFilled = null;
+    [SerializeField] private AudioSource AudioPotionSuccess = null;
+
     private void Awake()
     {
         Instance = this;
@@ -32,6 +36,7 @@ public class Cauldron : MonoBehaviour
             Ingredients.Add(ingredient, 1);
         else
             Ingredients[ingredient] += 1;
+        AudioCauldronFilled.Play();
     }
 
     public void EmptyCauldron()
@@ -46,7 +51,7 @@ public class Cauldron : MonoBehaviour
         {
             if (!emptyPotion.name.Contains(recipe.Second))
             {
-                // Animation flask détruite
+                AudioGlassBreaking.Play();
                 return;
             }
             foreach (Transform child in emptyPotion.transform)
@@ -62,13 +67,13 @@ public class Cauldron : MonoBehaviour
                         }
                     }
 
+                    AudioPotionSuccess.Play();
+
                     if (GoodPotion != null)
                     {
                         GoodPotion.gameObject.SetActive(true);
                         GoodPotion.Play();
                     }
-
-                    //Chest.SetPotion(emptyPotion);
 
                     break;
                 }
@@ -76,6 +81,7 @@ public class Cauldron : MonoBehaviour
         }
         else
         {
+            AudioGlassBreaking.Play();
             if (BadPotion != null)
             {
                 BadPotion.gameObject.SetActive(true);

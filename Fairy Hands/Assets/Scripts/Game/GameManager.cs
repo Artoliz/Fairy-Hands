@@ -272,6 +272,7 @@ public class GameManager : MonoBehaviour
 
         if (nbDone == GameRecipes.Count)
         {
+            StartCoroutine(PlayVictorySound());
             Book.CloseBook();
 
             SaveScore(minutes.ToString("00") + ":" + seconds.ToString("00"), PlayerPoints);
@@ -279,6 +280,12 @@ public class GameManager : MonoBehaviour
             GameStarted = false;
             Menu.Instance.BackToMainMenu();
         }
+    }
+
+    IEnumerator PlayVictorySound()
+    {
+        yield return new WaitForSeconds(2);
+        GetComponent<AudioSource>().Play();
     }
 
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> requireds, Dictionary<Ingredient.Type, int> givens)
