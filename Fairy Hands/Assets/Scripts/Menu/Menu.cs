@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
     public GameObject startMenu;
     public GameObject gameMenu;
 
+    public static Menu Instance;
+
     #endregion
 
     #region MonoBehaviour
@@ -16,6 +18,8 @@ public class Menu : MonoBehaviour
     {
         startMenu.SetActive(true);
         gameMenu.SetActive(false);
+
+        Instance = this;
     }
 
     #endregion

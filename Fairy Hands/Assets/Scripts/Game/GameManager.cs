@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     private bool GameStarted = false;
 
-    private Score Score;
+    private ScoreList ScoreList;
 
     private List<Recipe> Recipes = new List<Recipe>();
 
@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Score = new Score();
+
+        ScoreList = new ScoreList();
 
         LoadScores();
     }
@@ -64,16 +65,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SaveScore()
+    private void SaveScore(string time, int points)
     {
         if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Scores")))
             Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Scores"));
 
-        Score.Scores.Add("Wizard", PlayerPoints);
-        Scores.SetScores(Score.Scores);
+        Score Sc = new Score();
+        Sc.Time = time;
+        Sc.Points = points;
+
+        ScoreList.Scores.Add(Sc);
+        Scores.SetScores(ScoreList.Scores);
 
         var path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
-        File.WriteAllText(path, JsonUtility.ToJson(Score, true));
+        //Debug.Log(JsonUtility.ToJson(ScoreList, true));
+        File.WriteAllText(path, JsonUtility.ToJson(ScoreList, true));
     }
 
     private void LoadScores()
@@ -82,8 +88,8 @@ public class GameManager : MonoBehaviour
 
         if (File.Exists(path))
         {
-            Score = JsonUtility.FromJson<Score>(File.ReadAllText(path));
-            Scores.SetScores(Score.Scores);
+            ScoreList = JsonUtility.FromJson<ScoreList>(File.ReadAllText(path));
+            Scores.SetScores(ScoreList.Scores);
         }
     }
 
@@ -246,7 +252,7 @@ public class GameManager : MonoBehaviour
         {
             int indexRecipe = UnityEngine.Random.Range(0, names.Length - 1);
             if (!GameRecipes.ContainsKey((RecipeName)indexRecipe))
-                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 3)));
+                GameRecipes.Add((RecipeName)indexRecipe, new Pair<int, int>(0, UnityEngine.Random.Range(1, 2)));
             i += 1;
         }
 
@@ -268,14 +274,10 @@ public class GameManager : MonoBehaviour
         {
             Book.CloseBook();
 
-            DateTime time = new DateTime();
-            time.AddHours(hours);
-            time.AddMinutes(minutes);
-            time.AddSeconds(seconds);
-
-            SaveScore();
+            SaveScore(minutes.ToString("00") + ":" + seconds.ToString("00"), PlayerPoints);
 
             GameStarted = false;
+            Menu.Instance.BackToMainMenu();
         }
     }
 
@@ -317,12 +319,12 @@ public class GameManager : MonoBehaviour
     {
         GameRecipes.Clear();
         Cauldron.Instance.EmptyCauldron();
-        InitGameRecipes(isTuto);
         PlayerPoints = 0;
         seconds = 0;
         minutes = 0;
         hours = 0;
         GameStarted = true;
+        InitGameRecipes(isTuto);
     }
 
     public void RestartGame()
@@ -334,8 +336,8 @@ public class GameManager : MonoBehaviour
         seconds = 0;
         minutes = 0;
         hours = 0;
-        InitGameRecipes(false);
         GameStarted = true;
+        InitGameRecipes(false);
     }
 
     public void StopGame()

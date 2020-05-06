@@ -8,9 +8,14 @@ public class BasicInteractions : MonoBehaviour
 
     private Interactable interactable;
 
+    private Vector3 StartingPos;
+
     void Awake()
     {
         interactable = this.GetComponent<Interactable>();
+
+        if (this.tag == "Tool")
+            StartingPos = this.transform.position;
     }
 
 
@@ -111,6 +116,9 @@ public class BasicInteractions : MonoBehaviour
                     }
                 }
             }
+        } else if (this.tag == "Tool")
+        {
+            this.transform.position = StartingPos;
         }
     }
 
