@@ -13,23 +13,17 @@ public class VirtualKeyboard : MonoBehaviour
         if (CanPress)
         {
             String += key;
-            if (GameManager.Instance)
-                GameManager.Instance.Name.text = String;
         }
     }
 
     public void EraseLastKey()
     {
         String = String.Remove(String.Length - 1, 1);
-        if (GameManager.Instance)
-            GameManager.Instance.Name.text = String;
     }
 
     public void ClearString()
     {
         String = "";
-        if (GameManager.Instance)
-            GameManager.Instance.Name.text = String;
     }
 
     public string GetString()

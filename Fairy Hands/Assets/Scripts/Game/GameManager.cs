@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshPro TimerText = null;
     [SerializeField] private Scores Scores = null;
 
-    private string _name = "";
-
     private void Awake()
     {
         Instance = this;
@@ -268,8 +266,6 @@ public class GameManager : MonoBehaviour
 
         if (nbDone == GameRecipes.Count)
         {
-            Debug.Log("Le jeu est fini: Toutes les recettes sont faites!");
-
             Book.CloseBook();
 
             DateTime time = new DateTime();
@@ -277,17 +273,10 @@ public class GameManager : MonoBehaviour
             time.AddMinutes(minutes);
             time.AddSeconds(seconds);
 
-            int points = PlayerPoints;
+            SaveScore();
 
             GameStarted = false;
         }
-    }
-
-    public bool IsFlaskMatch(GameObject emptyPotion)
-    {
-        string emptyName = emptyPotion.name;
-
-        return true;
     }
 
     private bool AreIngredientsMatch(Dictionary<Ingredient.Type, int> requireds, Dictionary<Ingredient.Type, int> givens)

@@ -8,14 +8,6 @@ public class Scores : MonoBehaviour
 {
     [SerializeField] private GameObject[] ScoresDisplayeds = null;
 
-//    myList.Sort(
-//    delegate (KeyValuePair<string, string> pair1,
-//    KeyValuePair<string, string> pair2)
-//    {
-//        return pair1.Value.CompareTo(pair2.Value);
-//    }
-//);
-
     public void SetScores(Dictionary<string, int> scores)
     {
         List<KeyValuePair<string, int>> myList = scores.ToList();
