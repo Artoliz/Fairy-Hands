@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 23395450095505746}
   - component: {fileID: 968229638}
   - component: {fileID: 1361795930}
-  - component: {fileID: 1361795931}
   - component: {fileID: 1361795929}
   - component: {fileID: 1361795932}
   - component: {fileID: 171631725472099914}
   - component: {fileID: 1361795933}
   - component: {fileID: 1361795934}
   - component: {fileID: 6412148346965642082}
+  - component: {fileID: 5636113651369040478}
+  - component: {fileID: 9177951301891865267}
   m_Layer: 0
   m_Name: KnifeKitchen
   m_TagString: Tool
@@ -154,20 +155,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1361795931
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756967995458954}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 2c2f009d66b8e2d4ebcb46ca8e73d354, type: 3}
 --- !u!114 &1361795929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +307,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Magnitude: 2
+--- !u!65 &5636113651369040478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756967995458954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.71431124, y: 0.35837483, z: 0.042738676}
+  m_Center: {x: -0.16127728, y: -0.03274864, z: 0.000000035700698}
+--- !u!65 &9177951301891865267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756967995458954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61180353, y: 0.12660237, z: 0.042738676}
+  m_Center: {x: 0.496128, y: 0.08313761, z: 0.000000035700698}

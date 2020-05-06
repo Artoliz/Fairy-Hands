@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4934107187396011287}
   - component: {fileID: 114659607552243494}
   - component: {fileID: 114927749614383794}
+  - component: {fileID: 114588154760261974}
   m_Layer: 0
   m_Name: Flask_Pyramide
   m_TagString: Potion
@@ -294,6 +295,20 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &114588154760261974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088430995443123179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b79d36aa4d3db43b5ed4ae9eaa2fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chest: {fileID: 0}
+  Speed: 2
 --- !u!1 &9088614936119178643
 GameObject:
   m_ObjectHideFlags: 0

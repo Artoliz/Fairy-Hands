@@ -1132,6 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+  _action: 1
 --- !u!114 &539756014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,8 +1340,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.026026614, y: 0.08089948, z: 0.031930093}
-  m_Center: {x: 0.0009456612, y: 0.058178395, z: -0.0034261253}
+  m_Size: {x: 0.0503955, y: 0.08089948, z: 0.044114538}
+  m_Center: {x: 0.003121453, y: 0.058178395, z: -0.0012503348}
 --- !u!1 &2365618470604292573
 GameObject:
   m_ObjectHideFlags: 0

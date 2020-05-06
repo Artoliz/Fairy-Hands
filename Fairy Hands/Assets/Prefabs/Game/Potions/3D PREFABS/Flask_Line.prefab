@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 4385333067318836911}
   - component: {fileID: 114397658588277858}
   - component: {fileID: 114020263059331858}
+  - component: {fileID: 114729617091735864}
   m_Layer: 0
   m_Name: Flask_Line
   m_TagString: Potion
@@ -416,6 +417,20 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &114729617091735864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958111703823767877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b79d36aa4d3db43b5ed4ae9eaa2fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chest: {fileID: 0}
+  Speed: 2
 --- !u!1 &958404206143393447
 GameObject:
   m_ObjectHideFlags: 0

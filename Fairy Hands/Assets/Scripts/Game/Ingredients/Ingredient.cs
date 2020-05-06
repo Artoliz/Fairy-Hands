@@ -38,6 +38,15 @@ public class Ingredient : MonoBehaviour
         WolfPaw
     }
 
+    public enum Action
+    {
+        None,
+        Cutable,
+        Gratable,
+        Crushable
+    }
+
     public State _state = State.None;
     public Type _type = Type.None;
+    public Action _action = Action.None;
 }

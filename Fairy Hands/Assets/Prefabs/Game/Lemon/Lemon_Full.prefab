@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 1591820779}
   - component: {fileID: 1591820778}
   - component: {fileID: 1591820777}
-  - component: {fileID: 1063821553475952654}
   - component: {fileID: 5521119447321496450}
+  - component: {fileID: 4601504729119762110}
   m_Layer: 0
   m_Name: Lemon_Full
   m_TagString: Ingredient
@@ -279,20 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
---- !u!64 &1063821553475952654
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984183076071814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: b525ae10a281d5744b5bbe676e258c32, type: 3}
+  _action: 3
 --- !u!114 &5521119447321496450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +298,19 @@ MonoBehaviour:
   MaxHitTotal: 5
   CurrentHit: 0
   ProgressBar: {fileID: 5053649646639084360}
+--- !u!135 &4601504729119762110
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984183076071814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23712158
+  m_Center: {x: 0.0038909912, y: 0, z: -0.0077819824}
 --- !u!1 &4890531029981393680
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,3 +511,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 8559977375728472886}
+  CameraPos: {fileID: 0}

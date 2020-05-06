@@ -11,12 +11,16 @@ public class Grate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ingredient"))
         {
-            var velocityEstimator = GetComponentInParent<VelocityEstimator>();
-            if (velocityEstimator)
+            var ing = other.GetComponent<Ingredient>();
+            if (ing && ing._action == Ingredient.Action.Gratable)
             {
-                var modifier = other.gameObject.GetComponent<Modifier>();
-                if (modifier)
-                    modifier.ApplyModification();
+                var velocityEstimator = GetComponentInParent<VelocityEstimator>();
+                if (velocityEstimator)
+                {
+                    var modifier = other.gameObject.GetComponent<Modifier>();
+                    if (modifier)
+                        modifier.ApplyModification();
+                }
             }
         }
     }

@@ -11,12 +11,16 @@ public class Cut : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ingredient"))
         {
-            var velocityEstimator = GetComponentInParent<VelocityEstimator>();
-            if (velocityEstimator && velocityEstimator.GetVelocityEstimate().magnitude > Magnitude)
+            var ing = other.GetComponent<Ingredient>();
+            if (ing && ing._action == Ingredient.Action.Cutable)
             {
-                var modifier = other.gameObject.GetComponent<Modifier>();
-                if (modifier)
-                    modifier.ApplyModification();
+                var velocityEstimator = GetComponentInParent<VelocityEstimator>();
+                if (velocityEstimator && velocityEstimator.GetVelocityEstimate().magnitude > Magnitude)
+                {
+                    var modifier = other.gameObject.GetComponent<Modifier>();
+                    if (modifier)
+                        modifier.ApplyModification();
+                }
             }
         }
     }

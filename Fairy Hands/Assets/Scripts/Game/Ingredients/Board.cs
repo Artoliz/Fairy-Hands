@@ -21,6 +21,10 @@ public class Board : MonoBehaviour
                 {
                     collision.gameObject.GetComponent<BoxCollider>().isTrigger = true;
                 }
+                if (collision.gameObject.GetComponent<SphereCollider>() && collision.gameObject.GetComponent<SphereCollider>().isTrigger == false)
+                {
+                    collision.gameObject.GetComponent<SphereCollider>().isTrigger = true;
+                }
             }
             collision.gameObject.GetComponent<Ingredient>()._state = Ingredient.State.OverBoard;
         }

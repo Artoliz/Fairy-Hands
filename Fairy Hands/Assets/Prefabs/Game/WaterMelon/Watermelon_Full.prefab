@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+  _action: 1
 --- !u!114 &636074341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 1618297570216163793}
+  CameraPos: {fileID: 0}
 --- !u!1 &9001213397225790745
 GameObject:
   m_ObjectHideFlags: 0

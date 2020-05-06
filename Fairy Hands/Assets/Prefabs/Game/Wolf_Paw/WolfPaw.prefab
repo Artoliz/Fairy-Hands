@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 8110867838104962347}
   - component: {fileID: 3138188017613596340}
   m_Layer: 0
-  m_Name: Wolf_Paw
-  m_TagString: Untagged
+  m_Name: WolfPaw
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 22
+  _action: 0
 --- !u!65 &3138188017613596340
 BoxCollider:
   m_ObjectHideFlags: 0

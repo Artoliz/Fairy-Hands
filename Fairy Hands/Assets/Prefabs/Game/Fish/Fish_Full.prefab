@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+  _action: 1
 --- !u!114 &8227717927886522593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,3 +512,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 4518922178564266339}
+  CameraPos: {fileID: 0}

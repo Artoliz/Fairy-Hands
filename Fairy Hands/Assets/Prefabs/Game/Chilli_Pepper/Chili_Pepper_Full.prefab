@@ -435,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+  _action: 2
 --- !u!114 &8194873
 MonoBehaviour:
   m_ObjectHideFlags: 0

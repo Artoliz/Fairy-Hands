@@ -80,6 +80,10 @@ public class BasicInteractions : MonoBehaviour
             {
                 GetComponent<BoxCollider>().isTrigger = false;
             }
+            else if (GetComponent<SphereCollider>())
+            {
+                GetComponent<SphereCollider>().isTrigger = false;
+            }
         }
     }
 
@@ -92,6 +96,21 @@ public class BasicInteractions : MonoBehaviour
         if (this.tag == "Ingredient")
         {
             GetComponent<Ingredient>()._state = Ingredient.State.None;
+        } else if (this.tag == "Potion")
+        {
+            foreach (Transform child in this.transform)
+            {
+                if (child.name == "Fill")
+                {
+                    var renderer = child.GetComponent<Renderer>();
+                    if (renderer && !renderer.material.name.Contains("Empty"))
+                    {
+                        var potion = GetComponent<Potion>();
+                        if (potion)
+                            potion.GoToChest();
+                    }
+                }
+            }
         }
     }
 

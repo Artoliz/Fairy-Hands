@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 1681872548}
   - component: {fileID: 2902076146666783912}
   m_Layer: 0
-  m_Name: Eye_Mushroom_State_1
+  m_Name: EyeMushroom_State_1
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 0
+  _action: 1
 --- !u!114 &1681872548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,3 +626,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Progress: {fileID: 3404873259708385416}
+  CameraPos: {fileID: 0}
