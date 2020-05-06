@@ -11,7 +11,6 @@ public class Crush : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ingredient"))
         {
-            Debug.Log(other.name);
             var ing = other.GetComponent<Ingredient>();
             if (ing && ing._action == Ingredient.Action.Crushable)
             {

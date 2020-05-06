@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AutoBookController Book = null;
     [SerializeField] private TextMeshPro TimerText = null;
     [SerializeField] private Scores Scores = null;
-    [SerializeField] private GameObject InputName = null;
-    public TextMeshProUGUI Name = null;
 
     private string _name = "";
 
@@ -38,7 +36,6 @@ public class GameManager : MonoBehaviour
         Score = new Score();
 
         LoadScores();
-        InputName.SetActive(false);
     }
 
     private void Start()
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour
         if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Scores")))
             Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Scores"));
 
-        Score.Scores.Add(_name, PlayerPoints);
+        Score.Scores.Add("Wizard", PlayerPoints);
         Scores.SetScores(Score.Scores);
 
         var path = Path.Combine(Application.persistentDataPath, "Scores", "Scores.json");
@@ -273,6 +270,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Le jeu est fini: Toutes les recettes sont faites!");
 
+            Book.CloseBook();
+
             DateTime time = new DateTime();
             time.AddHours(hours);
             time.AddMinutes(minutes);
@@ -281,17 +280,7 @@ public class GameManager : MonoBehaviour
             int points = PlayerPoints;
 
             GameStarted = false;
-
-            InputName.SetActive(true);
         }
-    }
-
-    public void ValidateName()
-    {
-        _name = InputName.GetComponentInChildren<VirtualKeyboard>().GetString();
-        SaveScore();
-        StopGame();
-        InputName.SetActive(false);
     }
 
     public bool IsFlaskMatch(GameObject emptyPotion)
@@ -325,8 +314,6 @@ public class GameManager : MonoBehaviour
                 GameRecipes[recipe.Name].First += 1;
                 PlayerPoints += recipe.Points;
 
-                Debug.Log("Recipe: " + recipe.Name + " done.");
-
                 if (Book != null)
                     Book.RecipeDone(recipe.Name);
 
@@ -339,6 +326,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(bool isTuto)
     {
+        GameRecipes.Clear();
+        Cauldron.Instance.EmptyCauldron();
         InitGameRecipes(isTuto);
         PlayerPoints = 0;
         seconds = 0;
@@ -351,6 +340,7 @@ public class GameManager : MonoBehaviour
     {
         Book.CloseBook();
         GameRecipes.Clear();
+        Cauldron.Instance.EmptyCauldron();
         PlayerPoints = 0;
         seconds = 0;
         minutes = 0;
@@ -363,6 +353,7 @@ public class GameManager : MonoBehaviour
     {
         GameRecipes.Clear();
         Book.CloseBook();
+        Cauldron.Instance.EmptyCauldron();
         PlayerPoints = 0;
         seconds = 0;
         minutes = 0;

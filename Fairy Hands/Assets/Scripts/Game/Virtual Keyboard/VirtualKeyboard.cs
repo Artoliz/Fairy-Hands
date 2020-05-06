@@ -20,7 +20,7 @@ public class VirtualKeyboard : MonoBehaviour
 
     public void EraseLastKey()
     {
-        String.Remove(String.Length - 1);
+        String = String.Remove(String.Length - 1, 1);
         if (GameManager.Instance)
             GameManager.Instance.Name.text = String;
     }

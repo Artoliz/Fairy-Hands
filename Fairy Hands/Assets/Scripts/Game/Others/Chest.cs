@@ -31,13 +31,4 @@ public class Chest : MonoBehaviour
             _positions[n] = value;
         }
     }
-
-    //public void SetPotion(GameObject potion)
-    //{
-    //    potion.transform.SetParent(transform);
-    //    potion.transform.localPosition = _positions[_offset];
-    //    _offset += 1;
-    //    if (_offset >= _positions.Count)
-    //        _offset = 0;
-    //}
 }

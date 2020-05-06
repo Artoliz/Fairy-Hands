@@ -17,7 +17,7 @@ public class Potion : MonoBehaviour
         foreach (Transform child in Chest)
         {
             if (child.name.Contains("Cube"))
-                _positions.Add(child.position);
+                _positions.Add(child.localPosition);
         }
     }
 
@@ -25,16 +25,18 @@ public class Potion : MonoBehaviour
     {
         if (isMoving)
         {
-            Vector3.MoveTowards(transform.position, _destination, Time.deltaTime * Speed);
-            if (Vector3.Distance(transform.position, _destination) <= 0.1f)
-                isMoving = false;
+            Vector3.MoveTowards(transform.localPosition, _destination, Time.deltaTime * Speed);
         }
     }
 
     public void GoToChest()
     {
         isMoving = true;
+        GetComponent<Rigidbody>().useGravity = false;
+        transform.SetParent(Chest);
         if (_positions.Count > 0)
+        {
             _destination = _positions[Random.Range(0, _positions.Count - 1)];
+        }
     }
 }

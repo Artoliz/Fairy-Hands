@@ -4,6 +4,8 @@ using Valve.VR.InteractionSystem;
 
 public class Cauldron : MonoBehaviour
 {
+    public static Cauldron Instance;
+
     public Chest Chest;
 
     public Dictionary<Ingredient.Type, int> Ingredients = new Dictionary<Ingredient.Type, int>();
@@ -12,6 +14,11 @@ public class Cauldron : MonoBehaviour
 
     [SerializeField] private ParticleSystem BadPotion = null;
     [SerializeField] private ParticleSystem GoodPotion = null;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void AddIngredient(Ingredient.Type ingredient)
     {
@@ -40,7 +47,6 @@ public class Cauldron : MonoBehaviour
             if (!emptyPotion.name.Contains(recipe.Second))
             {
                 // Animation flask détruite
-                Debug.Log("La flask ne match pas avec la recette.");
                 return;
             }
             foreach (Transform child in emptyPotion.transform)
