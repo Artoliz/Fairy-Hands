@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7981847207290775246}
   - component: {fileID: 2244317837818749261}
   - component: {fileID: 5649990402909157236}
+  - component: {fileID: 7618640421015647588}
   - component: {fileID: 8222974858748541672}
   m_Layer: 0
   m_Name: Frog
@@ -278,6 +279,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   _type: 11
+  _action: 0
+--- !u!114 &7618640421015647588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496592747097070079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - Frog_papermodel (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: ea784c73172e7a544b5b105dc88fdc25, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
 --- !u!65 &8222974858748541672
 BoxCollider:
   m_ObjectHideFlags: 0

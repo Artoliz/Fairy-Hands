@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 114765825971879302}
   - component: {fileID: 114603223963664044}
   - component: {fileID: 2585017993501450082}
+  - component: {fileID: 2038965379335192083}
   m_Layer: 0
   m_Name: Butterfly_State_1
   m_TagString: Ingredient
@@ -236,6 +237,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4877115, y: 0.9674864, z: 0.5041601}
   m_Center: {x: 0.08941346, y: -0.6096387, z: 0.093478136}
+--- !u!114 &2038965379335192083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289586447642383938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7418c7dd8f977d4e969202d3fa7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseEditorExpanded: 1
+  blendEditorExpanded: 1
+  poseNames:
+  - Butterfly_State_1 (MAIN)
+  overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
+    type: 3}
+  overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+    type: 3}
+  skeletonMainPose: {fileID: 11400000, guid: 0aa661bc86e65bd4b937248652604cc4, type: 2}
+  skeletonAdditionalPoses: []
+  showLeftPreview: 0
+  showRightPreview: 0
+  previewLeftInstance: {fileID: 0}
+  previewRightInstance: {fileID: 0}
+  previewPoseSelection: 0
+  blendingBehaviours: []
+  scale: 1
 --- !u!1 &4289586447642383940
 GameObject:
   m_ObjectHideFlags: 0
